@@ -25,6 +25,7 @@ public class InputSystem : MonoBehaviour {
         actions.Player.FirstAbility3.performed += CastFourAbility;
         actions.UI.RightClick.performed += RightClick;
     }
+    
 
     private void Update() {
         mousePosition = actions.UI.Point.ReadValue<Vector2>();
