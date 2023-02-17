@@ -116,6 +116,15 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Press"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseRightClick"",
+                    ""type"": ""Button"",
+                    ""id"": ""8cd98cda-876b-43e1-b5b0-8df3d4d00ded"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -237,6 +246,17 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""FirstAbility8"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d58dcd06-f878-42d7-b310-9bef5f541857"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseRightClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -773,6 +793,7 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
         m_Player_FirstAbility7 = m_Player.FindAction("FirstAbility7", throwIfNotFound: true);
         m_Player_FirstAbility8 = m_Player.FindAction("FirstAbility8", throwIfNotFound: true);
         m_Player_FirstAbility9 = m_Player.FindAction("FirstAbility9", throwIfNotFound: true);
+        m_Player_MouseRightClick = m_Player.FindAction("MouseRightClick", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -854,6 +875,7 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_FirstAbility7;
     private readonly InputAction m_Player_FirstAbility8;
     private readonly InputAction m_Player_FirstAbility9;
+    private readonly InputAction m_Player_MouseRightClick;
     public struct PlayerActions
     {
         private @UserInputs m_Wrapper;
@@ -868,6 +890,7 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
         public InputAction @FirstAbility7 => m_Wrapper.m_Player_FirstAbility7;
         public InputAction @FirstAbility8 => m_Wrapper.m_Player_FirstAbility8;
         public InputAction @FirstAbility9 => m_Wrapper.m_Player_FirstAbility9;
+        public InputAction @MouseRightClick => m_Wrapper.m_Player_MouseRightClick;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -907,6 +930,9 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
                 @FirstAbility9.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility9;
                 @FirstAbility9.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility9;
                 @FirstAbility9.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility9;
+                @MouseRightClick.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseRightClick;
+                @MouseRightClick.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseRightClick;
+                @MouseRightClick.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseRightClick;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -941,6 +967,9 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
                 @FirstAbility9.started += instance.OnFirstAbility9;
                 @FirstAbility9.performed += instance.OnFirstAbility9;
                 @FirstAbility9.canceled += instance.OnFirstAbility9;
+                @MouseRightClick.started += instance.OnMouseRightClick;
+                @MouseRightClick.performed += instance.OnMouseRightClick;
+                @MouseRightClick.canceled += instance.OnMouseRightClick;
             }
         }
     }
@@ -1062,6 +1091,7 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
         void OnFirstAbility7(InputAction.CallbackContext context);
         void OnFirstAbility8(InputAction.CallbackContext context);
         void OnFirstAbility9(InputAction.CallbackContext context);
+        void OnMouseRightClick(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
