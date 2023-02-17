@@ -11,17 +11,6 @@ public class Spell {
     public GameObject prefab;
 }
 
-public class SpellSystem : MonoBehaviour {
+public class SpellSystem : Singleton<SpellSystem> {
     public Spell[] spells;
-
-    public void Start() {
-        SetSpells();
-    }
-
-    public void SetSpells() {
-        for (int i = 0; i < spells.Length; i++) {
-            Instantiate(spells[i].prefab);
-        }
-    }
-    
 }

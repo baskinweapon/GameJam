@@ -23,9 +23,7 @@ public class MainCharacter : MonoBehaviour {
 	}
 
 	private void MoveTowards() {
-		Debug.Log(Mouse.current.position.ReadValue());
 		target = Camera.main.ScreenToWorldPoint(InputSystem.instance.mousePosition);
-		Debug.Log(target);
 		target.z = 0;
 
 		isMoving = true;
