@@ -5,10 +5,10 @@ using UnityEngine.InputSystem;
 public class InputSystem : Singleton<InputSystem> {
     private  UserInputs actions;
 
-    public static Action OnCastFirstAbility;
-    public static Action OnCastSecondAbility;
-    public static Action OnCastThirdAbility;
-    public static Action OnCastFourAbility;
+    public static Action<int> OnCastFirstAbility;
+    public static Action<int> OnCastSecondAbility;
+    public static Action<int> OnCastThirdAbility;
+    public static Action<int> OnCastFourAbility;
 
     public static Action OnRightMouseClick;
     public static Action OnMouseClick;
@@ -43,21 +43,18 @@ public class InputSystem : Singleton<InputSystem> {
     }
 
     public void CastFirstAbility(InputAction.CallbackContext ctx) {
-        Debug.Log("First cast");
-        OnCastFirstAbility?.Invoke();
+        OnCastFirstAbility?.Invoke(0);
     }
 
     private void CastSecondAbility(InputAction.CallbackContext ctx) {
-        Debug.Log("Second cast");
-        OnCastSecondAbility?.Invoke();
+        OnCastSecondAbility?.Invoke(1);
     }
 
     private void CastThirdAbility(InputAction.CallbackContext ctx) {
-        OnCastThirdAbility?.Invoke();
-        Debug.Log("Third cast");
+        OnCastThirdAbility?.Invoke(2);
     } 
         
-    private void CastFourAbility(InputAction.CallbackContext ctx) => OnCastFourAbility?.Invoke();
+    private void CastFourAbility(InputAction.CallbackContext ctx) => OnCastFourAbility?.Invoke(3);
     
     private void OnDisable() {
         actions.Player.FirstAbility.performed -= CastFirstAbility;
