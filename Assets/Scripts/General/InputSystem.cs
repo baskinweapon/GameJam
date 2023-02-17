@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
 
 public class InputSystem : Singleton<InputSystem> {
     private  UserInputs actions;
@@ -31,6 +32,13 @@ public class InputSystem : Singleton<InputSystem> {
 
     private void Update() {
         mousePosition = actions.UI.Point.ReadValue<Vector2>();
+    }
+
+    public Vector2 GetMousePosition() {
+        Debug.Log(mousePosition);
+        InputState.Change(Mouse.current.position, mousePosition);
+        Debug.Log(mousePosition);
+        return  mousePosition;
     }
 
     private void Click(InputAction.CallbackContext ctx) {
