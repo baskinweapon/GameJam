@@ -5,7 +5,7 @@ public class Personality : ScriptableObject
 {
     [SerializeField] private float _speedMove;
     [SerializeField] private string _welcomeMessage;
-    [SerializeField] private string _story;
+    [TextArea(4, 10)][SerializeField] private string _story;
     [TextArea(3, 10)][SerializeField] private string[] _communication;
 
     public float SpeedMove => _speedMove;

@@ -1,12 +1,16 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class CharacterAbstract : MonoBehaviour
 {
     [SerializeField] private Personality _personality;
     [SerializeField] private Transform[] _movePoints;
     [SerializeField] private float _checkPointDelay;
+    [Space]
+    [SerializeField] private Canvas _canvas;
+    [SerializeField] private Text _welcomeMessage;
 
     private Transform _transform;
     private int _targetPos;
@@ -62,4 +66,38 @@ public abstract class CharacterAbstract : MonoBehaviour
         StartCoroutine(Move());
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            StopAllCoroutines();
+            _welcomeMessage.text = _personality.WelcomeMessage;
+            _canvas.gameObject.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            StartCoroutine(Move());
+            _welcomeMessage.text = "";
+            _canvas.gameObject.SetActive(false);
+        }
+    }
+
+    private void OnEnable()
+    {
+		InputSystem.OnCastFirstAbility += Tolk;
+    }
+
+    private void OnDisable()
+    {
+		InputSystem.OnCastFirstAbility -= Tolk;
+    }
+
+    public void Tolk()
+    {
+        _welcomeMessage.text = _personality.Story;
+    }
 }

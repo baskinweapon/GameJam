@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Baker
   m_EditorClassIdentifier: 
   _speedMove: 5
-  _welcomeMessage: 
-  _story: 
+  _welcomeMessage: Hello my friend
+  _story: My name is Maxim, I am a local baker. Could you help me with one thing?
   _communication:
   - 
   - 
