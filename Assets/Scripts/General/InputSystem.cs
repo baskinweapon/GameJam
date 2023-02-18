@@ -31,14 +31,11 @@ public class InputSystem : Singleton<InputSystem> {
     
 
     private void Update() {
-        mousePosition = actions.UI.Point.ReadValue<Vector2>();
+        mousePosition = Input.mousePosition;
     }
 
     public Vector2 GetMousePosition() {
-        Debug.Log(mousePosition);
-        InputState.Change(Mouse.current.position, mousePosition);
-        Debug.Log(mousePosition);
-        return  mousePosition;
+        return mousePosition;
     }
 
     private void Click(InputAction.CallbackContext ctx) {

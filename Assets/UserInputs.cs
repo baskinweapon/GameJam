@@ -295,7 +295,7 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Point"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Value"",
                     ""id"": ""1a9062b9-58f9-46d9-9c87-fb32ee60ef15"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
