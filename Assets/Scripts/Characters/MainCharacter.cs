@@ -10,7 +10,6 @@ public class MainCharacter : MonoBehaviour {
 		if (ai != null) ai.onSearchPath += LateUpdate;
 	}
 
-
 	private void LateUpdate() {
 		if (ai != null && target != ai.destination) ai.destination = target;
 	}

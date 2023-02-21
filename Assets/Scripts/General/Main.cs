@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Main : Singleton<Main> {
 
+	public MainCharacter character;
+	
 	public float playerHP;
 	public float playerMP;
 

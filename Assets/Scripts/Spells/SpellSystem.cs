@@ -15,9 +15,10 @@ public class Spell {
 }
 
 public class SpellSystem : Singleton<SpellSystem> {
-    public Action OnCooldown;
-    public Action OnReady;
-    public Action OnNoNeedMana;
+    public Action<int> OnCooldown;
+    public Action<int> OnReady;
+    public Action<int> OnNoNeedMana;
+    public Action<int> OnCast;
 
     public Spell[] currentSpells = new Spell[4];
 
