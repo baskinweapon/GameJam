@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MoveCamera : MonoBehaviour
 {
-    [SerializeField] private GameObject pleer;
+    [SerializeField] private GameObject player;
     [SerializeField] private float minPositionCamX;
     [SerializeField] private float maxPositionCamX;
     [SerializeField] private float minPositionCamY;
@@ -12,7 +12,7 @@ public class MoveCamera : MonoBehaviour
 
     private void Start()
     {
-        pleerTransform = pleer.GetComponent<Transform>();
+        pleerTransform = player.GetComponent<Transform>();
     }
 
     private void Update()
