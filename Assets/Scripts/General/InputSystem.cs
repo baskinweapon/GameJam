@@ -21,8 +21,7 @@ public class InputSystem : Singleton<InputSystem> {
     public static Action OnMouseClick;
 
     public Vector2 mousePosition;
-    public GameState state;
-
+    
     public static Action OnPause;
     public static Action OnPlay;
     public static Action OnDialog;
@@ -46,25 +45,11 @@ public class InputSystem : Singleton<InputSystem> {
         if (!isPaused) {
             isPaused = true;
             ChangeState(GameState.Pause);
+            OnPause?.Invoke();
         } else {
             isPaused = false;
             ChangeState(GameState.Play);
-        }
-    }
-
-    public void ChangeState(GameState _state) {
-        switch (state) {
-            case GameState.Pause:
-                Time.timeScale = 0;
-                break;
-            case GameState.Play:
-                Time.timeScale = 1;
-                break;
-            case GameState.Dialog:
-                Time.timeScale = 0;
-                break;
-            default:
-                throw new ArgumentOutOfRangeException();
+            OnPlay?.Invoke();
         }
     }
     
@@ -105,5 +90,21 @@ public class InputSystem : Singleton<InputSystem> {
         actions.Player.FirstAbility2.performed -= CastThirdAbility;
         actions.Player.FirstAbility3.performed -= CastFourAbility;
         actions.Player.MouseRightClick.performed -= RightClick;
+    }
+    
+    private void ChangeState(GameState _state) {
+        switch (_state) {
+            case GameState.Pause:
+                Time.timeScale = 0;
+                break;
+            case GameState.Play:
+                Time.timeScale = 1;
+                break;
+            case GameState.Dialog:
+                Time.timeScale = 0;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
     }
 }
