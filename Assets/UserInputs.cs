@@ -125,6 +125,15 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PauseButton"",
+                    ""type"": ""Button"",
+                    ""id"": ""2034a624-74c6-411d-ab0d-b695836d5ff2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -257,6 +266,17 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""MouseRightClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fc9fe51d-d566-4391-9c0d-82de6b71df0e"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PauseButton"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -794,6 +814,7 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
         m_Player_FirstAbility8 = m_Player.FindAction("FirstAbility8", throwIfNotFound: true);
         m_Player_FirstAbility9 = m_Player.FindAction("FirstAbility9", throwIfNotFound: true);
         m_Player_MouseRightClick = m_Player.FindAction("MouseRightClick", throwIfNotFound: true);
+        m_Player_PauseButton = m_Player.FindAction("PauseButton", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -876,6 +897,7 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_FirstAbility8;
     private readonly InputAction m_Player_FirstAbility9;
     private readonly InputAction m_Player_MouseRightClick;
+    private readonly InputAction m_Player_PauseButton;
     public struct PlayerActions
     {
         private @UserInputs m_Wrapper;
@@ -891,6 +913,7 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
         public InputAction @FirstAbility8 => m_Wrapper.m_Player_FirstAbility8;
         public InputAction @FirstAbility9 => m_Wrapper.m_Player_FirstAbility9;
         public InputAction @MouseRightClick => m_Wrapper.m_Player_MouseRightClick;
+        public InputAction @PauseButton => m_Wrapper.m_Player_PauseButton;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -933,6 +956,9 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
                 @MouseRightClick.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseRightClick;
                 @MouseRightClick.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseRightClick;
                 @MouseRightClick.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseRightClick;
+                @PauseButton.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseButton;
+                @PauseButton.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseButton;
+                @PauseButton.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseButton;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -970,6 +996,9 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
                 @MouseRightClick.started += instance.OnMouseRightClick;
                 @MouseRightClick.performed += instance.OnMouseRightClick;
                 @MouseRightClick.canceled += instance.OnMouseRightClick;
+                @PauseButton.started += instance.OnPauseButton;
+                @PauseButton.performed += instance.OnPauseButton;
+                @PauseButton.canceled += instance.OnPauseButton;
             }
         }
     }
@@ -1092,6 +1121,7 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
         void OnFirstAbility8(InputAction.CallbackContext context);
         void OnFirstAbility9(InputAction.CallbackContext context);
         void OnMouseRightClick(InputAction.CallbackContext context);
+        void OnPauseButton(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

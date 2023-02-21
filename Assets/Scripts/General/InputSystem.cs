@@ -3,6 +3,12 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 
+public enum GameState {
+    Pause,
+    Play,
+    Dialog
+}
+
 public class InputSystem : Singleton<InputSystem> {
     private  UserInputs actions;
 
@@ -15,7 +21,12 @@ public class InputSystem : Singleton<InputSystem> {
     public static Action OnMouseClick;
 
     public Vector2 mousePosition;
-    
+    public GameState state;
+
+    public static Action OnPause;
+    public static Action OnPlay;
+    public static Action OnDialog;
+
     private void OnEnable() {
         
         actions = new UserInputs();
@@ -27,9 +38,36 @@ public class InputSystem : Singleton<InputSystem> {
         actions.Player.FirstAbility3.performed += CastFourAbility;
         actions.Player.MouseRightClick.performed += RightClick;
         actions.UI.Click.performed += Click;
+        actions.Player.PauseButton.performed += Pause;
+    }
+
+    public bool isPaused;
+    public void Pause(InputAction.CallbackContext ctx = default) {
+        if (!isPaused) {
+            isPaused = true;
+            ChangeState(GameState.Pause);
+        } else {
+            isPaused = false;
+            ChangeState(GameState.Play);
+        }
+    }
+
+    public void ChangeState(GameState _state) {
+        switch (state) {
+            case GameState.Pause:
+                Time.timeScale = 0;
+                break;
+            case GameState.Play:
+                Time.timeScale = 1;
+                break;
+            case GameState.Dialog:
+                Time.timeScale = 0;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
     }
     
-
     private void Update() {
         mousePosition = Input.mousePosition;
     }
