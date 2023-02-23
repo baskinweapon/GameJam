@@ -22,7 +22,8 @@ public class EnemyAI : MonoBehaviour {
 
     public Image healthBar;
     private IAstarAI ai;
-    
+
+
     private void Start() {
         ai = GetComponent<IAstarAI>();
         if (ai != null) ai.onSearchPath += LateUpdate;
@@ -35,11 +36,13 @@ public class EnemyAI : MonoBehaviour {
     }
     
     private void GetTarget() {
-        if (Vector2.Distance(Main.instance.character.transform.position, transform.position) <= chaseDistance) {
-            target = Main.instance.character.transform.position;
-        } else if (Vector2.Distance(Main.instance.character.transform.position, transform.position) <= startMovingDistance) {
+        var distance = Vector2.Distance(Main.instance.character.transform.position, transform.position);
+        if (distance <= startMovingDistance) {
             target = transform.position + new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), 0);
-        } else if (Vector2.Distance(Main.instance.character.transform.position, transform.position) <= startAttack) {
+        } if (distance <= chaseDistance) {
+            target = Main.instance.character.transform.position;
+        } if (distance <= startAttack) {
+            ai.destination = transform.position;
             target = ai.destination;
         }
         
