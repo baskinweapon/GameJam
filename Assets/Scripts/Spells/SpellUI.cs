@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,31 +10,32 @@ public class SpellUI : MonoBehaviour {
    private int counter;
 
    public void Start() {
+      SetImages();
+      Main.OnChangeSpell += SetImages;
+   }
+
+   public void SetImages() {
+      counter = 0;
       foreach (var images in panelsImages) {
          images.color = new Color(1, 1, 1, 1);
-         images.sprite = SpellSystem.instance.currentSpells[counter].icon;
+         images.sprite = Main.instance.playerInfo.CurrentSpells[counter].icon;
          images.color = CheckSpell(images);
          counter++;
       }
    }
-   
-   
+
    public Color CheckSpell(Image _image) {
       var color = Color.white;
       for (int i = 0; i < panelsImages.Length; i++) {
-         if (Main.instance.playerMP < SpellSystem.instance.currentSpells[i].manaCost) {
+         if (Main.instance.playerInfo.currentMP < Main.instance.playerInfo.CurrentSpells[counter].manaCost) {
             color = noManaColor;
-         }
-         
-         if (Main.instance.level < SpellSystem.instance.currentSpells[i].manaCost) {
-            
          }
       }
 
       return color;
    }
    
-   public void  ChangeOrSetSpell() {
-      panelsImages[counter].sprite = SpellSystem.instance.spells[counter].icon;
+   private void OnDisable() {
+      Main.OnChangeSpell += SetImages;
    }
 }

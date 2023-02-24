@@ -12,14 +12,10 @@ public class Cooldown : MonoBehaviour {
 
    public Spell spell;
    private bool needLevel;
+   
    private void Start() {
-      /*if (count > Main.instance.level) {
-         needLevel = true;
-      } else {
-         image.fillAmount = 0;
-      }*/
       image.fillAmount = 0;
-      SetSpell(SpellSystem.instance.currentSpells[count]);
+      SetSpell(Main.instance.playerInfo.CurrentSpells[count]);
    }
 
    public void SetSpell(Spell _spell) {
@@ -30,7 +26,7 @@ public class Cooldown : MonoBehaviour {
    public void PressSpell() {
       //if (needLevel) return;
       if (isCasting) return;
-      if (Main.instance.playerMP < spell.manaCost) return;
+      if (Main.instance.playerInfo.currentMP < spell.manaCost) return;
       
       CastAbility();
       StartCoroutine(StartCooldown());
@@ -39,7 +35,17 @@ public class Cooldown : MonoBehaviour {
 
    public void CastAbility() {
       var pref = Instantiate(spell.prefab);
-      pref.transform.position = Camera.main.ScreenToWorldPoint(InputSystem.instance.GetMousePosition());
+      switch (spell.type) {
+         case SpellType.areaDamage:
+            pref.transform.position = Camera.main.ScreenToWorldPoint(InputSystem.instance.GetMousePosition());
+            break;
+         case SpellType.onPlayer:
+            pref.transform.parent = Main.instance.character.transform;
+            pref.transform.localPosition = Vector3.zero;
+            break;
+         default:
+            throw new ArgumentOutOfRangeException();
+      }
    }
    
    private float time;

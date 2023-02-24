@@ -14,7 +14,7 @@ public class HealthBar : MonoBehaviour {
     }
 
     public void ChangeHealth() {
-        text.text = (int)Main.instance.playerHP + " / " + (int)Main.instance.maxHP;
-        image.fillAmount = Main.instance.playerHP / Main.instance.maxHP;
+        text.text = (int)Main.instance.playerInfo.currentHP + " / " + (int)Main.instance.playerInfo.maxHp;
+        image.fillAmount = Main.instance.playerInfo.currentHP / Main.instance.playerInfo.maxHp;
     }
 }

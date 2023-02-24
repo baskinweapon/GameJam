@@ -14,7 +14,7 @@ public class ManaBar : MonoBehaviour
     }
 
     public void ChangeHealth() {
-        text.text = (int)Main.instance.playerMP + " / " + (int)Main.instance.maxMP;
-        image.fillAmount = Main.instance.playerMP / Main.instance.maxMP;
+        text.text = (int)Main.instance.playerInfo.currentMP + " / " + (int)Main.instance.playerInfo.maxMP;
+        image.fillAmount = Main.instance.playerInfo.currentMP / Main.instance.playerInfo.maxMP;
     }
 }

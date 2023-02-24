@@ -64,60 +64,6 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""FirstAbility4"",
-                    ""type"": ""Button"",
-                    ""id"": ""80c9cc6c-0882-4cfb-aee9-5ad8bc2197f4"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""FirstAbility5"",
-                    ""type"": ""Button"",
-                    ""id"": ""53c67c53-ecbe-4b0f-bf9d-85426b7ec964"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""FirstAbility6"",
-                    ""type"": ""Button"",
-                    ""id"": ""26b9cff3-8883-4f90-980e-acbf5281f813"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""FirstAbility7"",
-                    ""type"": ""Button"",
-                    ""id"": ""c2f9454f-4055-4edb-8d63-1b4a273c5fe8"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""FirstAbility8"",
-                    ""type"": ""Button"",
-                    ""id"": ""3e7a7ccf-9f01-4763-9098-9e0add95c7ae"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""FirstAbility9"",
-                    ""type"": ""Button"",
-                    ""id"": ""edfd83e0-3ee3-45a3-96ce-5d93b2de8dd6"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""MouseRightClick"",
                     ""type"": ""Button"",
                     ""id"": ""8cd98cda-876b-43e1-b5b0-8df3d4d00ded"",
@@ -161,17 +107,6 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""bb9e3ba6-5c73-4df3-80e5-9c64f11e9109"",
-                    ""path"": ""<Keyboard>/0"",
-                    ""interactions"": ""Press"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""FirstAbility9"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""8a16d0b3-c21e-439b-b1f3-3a2d995a3755"",
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
@@ -200,61 +135,6 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""FirstAbility2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""bbfde946-f299-41cd-b326-dd7c7c8bd530"",
-                    ""path"": ""<Keyboard>/5"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""FirstAbility4"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""789e2ad3-2baa-4f10-9f1e-c502de052536"",
-                    ""path"": ""<Keyboard>/6"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""FirstAbility5"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""00a7fa93-74c2-46d0-8705-8cbb17c8b32f"",
-                    ""path"": ""<Keyboard>/7"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""FirstAbility6"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""5a465c3b-1f9d-41c7-ba0c-711bcf432df0"",
-                    ""path"": ""<Keyboard>/8"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""FirstAbility7"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""aad317d7-5edf-4b90-8ece-429273e24611"",
-                    ""path"": ""<Keyboard>/9"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""FirstAbility8"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -807,12 +687,6 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
         m_Player_FirstAbility1 = m_Player.FindAction("FirstAbility1", throwIfNotFound: true);
         m_Player_FirstAbility2 = m_Player.FindAction("FirstAbility2", throwIfNotFound: true);
         m_Player_FirstAbility3 = m_Player.FindAction("FirstAbility3", throwIfNotFound: true);
-        m_Player_FirstAbility4 = m_Player.FindAction("FirstAbility4", throwIfNotFound: true);
-        m_Player_FirstAbility5 = m_Player.FindAction("FirstAbility5", throwIfNotFound: true);
-        m_Player_FirstAbility6 = m_Player.FindAction("FirstAbility6", throwIfNotFound: true);
-        m_Player_FirstAbility7 = m_Player.FindAction("FirstAbility7", throwIfNotFound: true);
-        m_Player_FirstAbility8 = m_Player.FindAction("FirstAbility8", throwIfNotFound: true);
-        m_Player_FirstAbility9 = m_Player.FindAction("FirstAbility9", throwIfNotFound: true);
         m_Player_MouseRightClick = m_Player.FindAction("MouseRightClick", throwIfNotFound: true);
         m_Player_PauseButton = m_Player.FindAction("PauseButton", throwIfNotFound: true);
         // UI
@@ -890,12 +764,6 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_FirstAbility1;
     private readonly InputAction m_Player_FirstAbility2;
     private readonly InputAction m_Player_FirstAbility3;
-    private readonly InputAction m_Player_FirstAbility4;
-    private readonly InputAction m_Player_FirstAbility5;
-    private readonly InputAction m_Player_FirstAbility6;
-    private readonly InputAction m_Player_FirstAbility7;
-    private readonly InputAction m_Player_FirstAbility8;
-    private readonly InputAction m_Player_FirstAbility9;
     private readonly InputAction m_Player_MouseRightClick;
     private readonly InputAction m_Player_PauseButton;
     public struct PlayerActions
@@ -906,12 +774,6 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
         public InputAction @FirstAbility1 => m_Wrapper.m_Player_FirstAbility1;
         public InputAction @FirstAbility2 => m_Wrapper.m_Player_FirstAbility2;
         public InputAction @FirstAbility3 => m_Wrapper.m_Player_FirstAbility3;
-        public InputAction @FirstAbility4 => m_Wrapper.m_Player_FirstAbility4;
-        public InputAction @FirstAbility5 => m_Wrapper.m_Player_FirstAbility5;
-        public InputAction @FirstAbility6 => m_Wrapper.m_Player_FirstAbility6;
-        public InputAction @FirstAbility7 => m_Wrapper.m_Player_FirstAbility7;
-        public InputAction @FirstAbility8 => m_Wrapper.m_Player_FirstAbility8;
-        public InputAction @FirstAbility9 => m_Wrapper.m_Player_FirstAbility9;
         public InputAction @MouseRightClick => m_Wrapper.m_Player_MouseRightClick;
         public InputAction @PauseButton => m_Wrapper.m_Player_PauseButton;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -935,24 +797,6 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
                 @FirstAbility3.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility3;
                 @FirstAbility3.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility3;
                 @FirstAbility3.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility3;
-                @FirstAbility4.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility4;
-                @FirstAbility4.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility4;
-                @FirstAbility4.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility4;
-                @FirstAbility5.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility5;
-                @FirstAbility5.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility5;
-                @FirstAbility5.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility5;
-                @FirstAbility6.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility6;
-                @FirstAbility6.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility6;
-                @FirstAbility6.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility6;
-                @FirstAbility7.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility7;
-                @FirstAbility7.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility7;
-                @FirstAbility7.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility7;
-                @FirstAbility8.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility8;
-                @FirstAbility8.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility8;
-                @FirstAbility8.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility8;
-                @FirstAbility9.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility9;
-                @FirstAbility9.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility9;
-                @FirstAbility9.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstAbility9;
                 @MouseRightClick.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseRightClick;
                 @MouseRightClick.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseRightClick;
                 @MouseRightClick.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseRightClick;
@@ -975,24 +819,6 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
                 @FirstAbility3.started += instance.OnFirstAbility3;
                 @FirstAbility3.performed += instance.OnFirstAbility3;
                 @FirstAbility3.canceled += instance.OnFirstAbility3;
-                @FirstAbility4.started += instance.OnFirstAbility4;
-                @FirstAbility4.performed += instance.OnFirstAbility4;
-                @FirstAbility4.canceled += instance.OnFirstAbility4;
-                @FirstAbility5.started += instance.OnFirstAbility5;
-                @FirstAbility5.performed += instance.OnFirstAbility5;
-                @FirstAbility5.canceled += instance.OnFirstAbility5;
-                @FirstAbility6.started += instance.OnFirstAbility6;
-                @FirstAbility6.performed += instance.OnFirstAbility6;
-                @FirstAbility6.canceled += instance.OnFirstAbility6;
-                @FirstAbility7.started += instance.OnFirstAbility7;
-                @FirstAbility7.performed += instance.OnFirstAbility7;
-                @FirstAbility7.canceled += instance.OnFirstAbility7;
-                @FirstAbility8.started += instance.OnFirstAbility8;
-                @FirstAbility8.performed += instance.OnFirstAbility8;
-                @FirstAbility8.canceled += instance.OnFirstAbility8;
-                @FirstAbility9.started += instance.OnFirstAbility9;
-                @FirstAbility9.performed += instance.OnFirstAbility9;
-                @FirstAbility9.canceled += instance.OnFirstAbility9;
                 @MouseRightClick.started += instance.OnMouseRightClick;
                 @MouseRightClick.performed += instance.OnMouseRightClick;
                 @MouseRightClick.canceled += instance.OnMouseRightClick;
@@ -1114,12 +940,6 @@ public partial class @UserInputs : IInputActionCollection2, IDisposable
         void OnFirstAbility1(InputAction.CallbackContext context);
         void OnFirstAbility2(InputAction.CallbackContext context);
         void OnFirstAbility3(InputAction.CallbackContext context);
-        void OnFirstAbility4(InputAction.CallbackContext context);
-        void OnFirstAbility5(InputAction.CallbackContext context);
-        void OnFirstAbility6(InputAction.CallbackContext context);
-        void OnFirstAbility7(InputAction.CallbackContext context);
-        void OnFirstAbility8(InputAction.CallbackContext context);
-        void OnFirstAbility9(InputAction.CallbackContext context);
         void OnMouseRightClick(InputAction.CallbackContext context);
         void OnPauseButton(InputAction.CallbackContext context);
     }

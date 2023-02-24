@@ -92,7 +92,7 @@ public class InputSystem : Singleton<InputSystem> {
         actions.Player.MouseRightClick.performed -= RightClick;
     }
     
-    private void ChangeState(GameState _state) {
+    public void ChangeState(GameState _state) {
         switch (_state) {
             case GameState.Pause:
                 Time.timeScale = 0;

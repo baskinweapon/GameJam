@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Personality", menuName = "ScriptableObject/ new Personality")]
-public class Personality : ScriptableObject
+public class Personality : UnityEngine.ScriptableObject
 {
     [SerializeField] private float _speedMove;
     [SerializeField] private string _welcomeMessage;
