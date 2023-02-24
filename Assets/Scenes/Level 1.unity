@@ -457,7 +457,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &860687905
 AudioListener:
   m_ObjectHideFlags: 0
@@ -569,7 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 145edd4fda7f2473da0050e827ae4547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pleer: {fileID: 1142558653}
+  player: {fileID: 0}
   minPositionCamX: -13
   maxPositionCamX: 7
   minPositionCamY: -3
@@ -755,11 +755,6 @@ Transform:
   m_Father: {fileID: 1102540816}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1142558653 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4916836563356561580, guid: 872a356db2b2c442b8c303b02aca80fc, type: 3}
-  m_PrefabInstance: {fileID: 4916836562351636241}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1178038933
 PrefabInstance:
   m_ObjectHideFlags: 0

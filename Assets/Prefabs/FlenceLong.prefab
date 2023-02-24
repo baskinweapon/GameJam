@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2573837852666209541}
   - component: {fileID: 3511614766097435138}
   - component: {fileID: 2469492989440448522}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 4549115858994040810}
   - component: {fileID: 4549115858994040808}
   - component: {fileID: 4549115858994040811}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 4549115858999249881}
   - component: {fileID: 4549115858999249887}
   - component: {fileID: 4549115858999249886}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 4549115859013735248}
   - component: {fileID: 4549115859013735254}
   - component: {fileID: 4549115859013735249}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 4549115859028767351}
   - component: {fileID: 4549115859028767348}
   - component: {fileID: 4549115859028767349}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1666351472, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 4549115859042644876}
   - component: {fileID: 4549115859042644877}
   - component: {fileID: 4549115859042644866}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +646,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 4549115859043870967}
   - component: {fileID: 4549115859043870964}
   - component: {fileID: 4549115859043870965}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +760,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 960002146, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -812,7 +812,7 @@ GameObject:
   - component: {fileID: 4549115859109082613}
   - component: {fileID: 4549115859109082603}
   - component: {fileID: 4549115859109082602}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_6 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -874,7 +874,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: -500634357, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -926,7 +926,7 @@ GameObject:
   - component: {fileID: 4549115859130995431}
   - component: {fileID: 4549115859130995428}
   - component: {fileID: 4549115859130995429}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_7 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -988,7 +988,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 92176341, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1040,7 +1040,7 @@ GameObject:
   - component: {fileID: 4549115859139002176}
   - component: {fileID: 4549115859139002182}
   - component: {fileID: 4549115859139002177}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1102,7 +1102,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1154,7 +1154,7 @@ GameObject:
   - component: {fileID: 4549115859177654999}
   - component: {fileID: 4549115859177654997}
   - component: {fileID: 4549115859177654996}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1216,7 +1216,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1268,7 +1268,7 @@ GameObject:
   - component: {fileID: 4549115859223655519}
   - component: {fileID: 4549115859223655516}
   - component: {fileID: 4549115859223655517}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1330,7 +1330,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 624170650, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1380,7 +1380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4549115859229390806}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FlenceLong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1451,7 +1451,7 @@ GameObject:
   - component: {fileID: 4549115859552333341}
   - component: {fileID: 4549115859552333330}
   - component: {fileID: 4549115859552333331}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1513,7 +1513,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1748883499, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1565,7 +1565,7 @@ GameObject:
   - component: {fileID: 4549115859718411823}
   - component: {fileID: 4549115859718411821}
   - component: {fileID: 4549115859718411820}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_5 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1627,7 +1627,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1088145430, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1679,7 +1679,7 @@ GameObject:
   - component: {fileID: 4549115859816190240}
   - component: {fileID: 4549115859816190241}
   - component: {fileID: 4549115859816190246}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1741,7 +1741,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: -500634357, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1793,7 +1793,7 @@ GameObject:
   - component: {fileID: 4549115859857896297}
   - component: {fileID: 4549115859857896303}
   - component: {fileID: 4549115859857896302}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1855,7 +1855,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1907,7 +1907,7 @@ GameObject:
   - component: {fileID: 4549115859885150954}
   - component: {fileID: 4549115859885150955}
   - component: {fileID: 4549115859885150952}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1969,7 +1969,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -2021,7 +2021,7 @@ GameObject:
   - component: {fileID: 4549115859908992040}
   - component: {fileID: 4549115859908992041}
   - component: {fileID: 4549115859908992046}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2083,7 +2083,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 960002146, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2135,7 +2135,7 @@ GameObject:
   - component: {fileID: 4549115860049705470}
   - component: {fileID: 4549115860049705468}
   - component: {fileID: 4549115860049705471}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_6 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2197,7 +2197,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: -500634357, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2249,7 +2249,7 @@ GameObject:
   - component: {fileID: 4549115860105813233}
   - component: {fileID: 4549115860105813239}
   - component: {fileID: 4549115860105813238}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2311,7 +2311,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2363,7 +2363,7 @@ GameObject:
   - component: {fileID: 4549115860122632234}
   - component: {fileID: 4549115860122632232}
   - component: {fileID: 4549115860122632235}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_5 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2425,7 +2425,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1088145430, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2477,7 +2477,7 @@ GameObject:
   - component: {fileID: 4549115860131927701}
   - component: {fileID: 4549115860131927690}
   - component: {fileID: 4549115860131927691}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2539,7 +2539,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1059287418, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2591,7 +2591,7 @@ GameObject:
   - component: {fileID: 4549115860147337402}
   - component: {fileID: 4549115860147337400}
   - component: {fileID: 4549115860147337403}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2653,7 +2653,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -2705,7 +2705,7 @@ GameObject:
   - component: {fileID: 4549115860265421453}
   - component: {fileID: 4549115860265421443}
   - component: {fileID: 4549115860265421442}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_6 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2767,7 +2767,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: -500634357, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2819,7 +2819,7 @@ GameObject:
   - component: {fileID: 4549115860292916592}
   - component: {fileID: 4549115860292916593}
   - component: {fileID: 4549115860292916598}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2881,7 +2881,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2933,7 +2933,7 @@ GameObject:
   - component: {fileID: 4549115860374892633}
   - component: {fileID: 4549115860374892638}
   - component: {fileID: 4549115860374892639}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2995,7 +2995,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -3047,7 +3047,7 @@ GameObject:
   - component: {fileID: 4549115860411700571}
   - component: {fileID: 4549115860411700569}
   - component: {fileID: 4549115860411700568}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_5 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3109,7 +3109,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1088145430, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3161,7 +3161,7 @@ GameObject:
   - component: {fileID: 4549115860473923252}
   - component: {fileID: 4549115860473923242}
   - component: {fileID: 4549115860473923253}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3223,7 +3223,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -3275,7 +3275,7 @@ GameObject:
   - component: {fileID: 4549115860558068415}
   - component: {fileID: 4549115860558068412}
   - component: {fileID: 4549115860558068413}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3337,7 +3337,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1088145430, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3389,7 +3389,7 @@ GameObject:
   - component: {fileID: 4549115860599396964}
   - component: {fileID: 4549115860599396954}
   - component: {fileID: 4549115860599396965}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3451,7 +3451,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -3503,7 +3503,7 @@ GameObject:
   - component: {fileID: 4549115860642049371}
   - component: {fileID: 4549115860642049368}
   - component: {fileID: 4549115860642049369}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3565,7 +3565,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3617,7 +3617,7 @@ GameObject:
   - component: {fileID: 4549115860656533620}
   - component: {fileID: 4549115860656533610}
   - component: {fileID: 4549115860656533621}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3679,7 +3679,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3731,7 +3731,7 @@ GameObject:
   - component: {fileID: 4549115860660280696}
   - component: {fileID: 4549115860660280697}
   - component: {fileID: 4549115860660280702}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3793,7 +3793,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 92176341, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3845,7 +3845,7 @@ GameObject:
   - component: {fileID: 4549115860714407264}
   - component: {fileID: 4549115860714407265}
   - component: {fileID: 4549115860714407270}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3907,7 +3907,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1059287418, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3959,7 +3959,7 @@ GameObject:
   - component: {fileID: 4549115860800531069}
   - component: {fileID: 4549115860800531059}
   - component: {fileID: 4549115860800531058}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_5 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4021,7 +4021,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1088145430, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4073,7 +4073,7 @@ GameObject:
   - component: {fileID: 4549115860811989205}
   - component: {fileID: 4549115860811989194}
   - component: {fileID: 4549115860811989195}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4135,7 +4135,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1425347822, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4190,7 +4190,7 @@ GameObject:
   - component: {fileID: 4549115861023320602}
   - component: {fileID: 4549115861023320600}
   - component: {fileID: 4549115861023320603}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_9 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4252,7 +4252,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 786011537, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -4304,7 +4304,7 @@ GameObject:
   - component: {fileID: 4549115861044445542}
   - component: {fileID: 4549115861044445540}
   - component: {fileID: 4549115861044445543}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence_6 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4366,7 +4366,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: -500634357, guid: 59fe61c8574e54d699a314b863b0f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

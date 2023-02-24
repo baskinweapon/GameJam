@@ -3,7 +3,10 @@ using UnityEngine;
 
 public class MainCharacter : MonoBehaviour {
 	private IAstarAI ai;
+	public GameObject moveToVisual; 
+	
 	public void Start() {
+		moveToVisual.SetActive(false);
 		InputSystem.OnMouseClick += MoveTowards;
 		
 		ai = GetComponent<IAstarAI>();
@@ -12,12 +15,16 @@ public class MainCharacter : MonoBehaviour {
 
 	private void LateUpdate() {
 		if (ai != null && target != ai.destination) ai.destination = target;
+		if (Vector2.Distance(transform.position, target) <= 0.5f)
+			moveToVisual.SetActive(false);
 	}
 	
 	private Vector3 target;
 	private void MoveTowards() {
 		target = Camera.main.ScreenToWorldPoint(InputSystem.instance.mousePosition);
 		target.z = 0;
+		moveToVisual.SetActive(true);
+		moveToVisual.transform.position = target;
 	}
 
 	private void OnDisable() {
