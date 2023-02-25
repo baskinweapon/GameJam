@@ -80,7 +80,7 @@ public abstract class CharacterAbstract : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            StartCoroutine(Move());
+            if (_movePoints.Length >= 2) StartCoroutine(Move());
             _welcomeMessage.text = "";
             _canvas.gameObject.SetActive(false);
         }
