@@ -16,9 +16,9 @@ MonoBehaviour:
     isStartGame: 0
     currentSceneId: 1
     player:
-      currentHP: 40.399826
+      currentHP: 100
       maxHp: 100
-      currentMP: 164
+      currentMP: 1000
       maxMP: 1000
       level: 1
       CurrentSpells: []
@@ -27,7 +27,7 @@ MonoBehaviour:
     - id: 0
       name: 'Fire '
       description: Fire around area
-      icon: {fileID: 21300000, guid: 3608069afa094ba4ca3b4a513ef40523, type: 3}
+      icon: {fileID: 21300000, guid: cc06a2c7bebb9384a97068dc9a95a4ba, type: 3}
       prefab: {fileID: 8976149393850198116, guid: 4af97dc5417424611848dd7776866129, type: 3}
       manaCost: 20
       audioClip: {fileID: 0}
@@ -37,7 +37,7 @@ MonoBehaviour:
     - id: 1
       name: Heal
       description: Reset your HP
-      icon: {fileID: 21300000, guid: 40b6dcd39a1ad6c469c156b63a9b06ac, type: 3}
+      icon: {fileID: 21300000, guid: 14f3529bfee9bd14a87f2eb48a6bcccc, type: 3}
       prefab: {fileID: 6021011766212827887, guid: 490dd9c9888d840a3b97b63140be5449, type: 3}
       manaCost: 50
       audioClip: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
     - id: 2
       name: Purple Death
       description: area dasmage
-      icon: {fileID: 21300000, guid: 8a9539f9a854bc84b95d5c4dbe030fc4, type: 3}
+      icon: {fileID: 21300000, guid: 5ad007262d78e96459d4e9397a85d4b8, type: 3}
       prefab: {fileID: 1305504078843124156, guid: 642247778faf94045823ea1db3cd650e, type: 3}
       manaCost: 30
       audioClip: {fileID: 0}
@@ -57,7 +57,7 @@ MonoBehaviour:
     - id: 3
       name: Void
       description: void damage on area
-      icon: {fileID: 21300000, guid: 02dde1bbde18e8d4bbb623b4494e5196, type: 3}
+      icon: {fileID: 21300000, guid: f19fb3c8d57c1bc4eb997cc8a40e4245, type: 3}
       prefab: {fileID: 1305504078843124156, guid: 5f4de70dea5a843ec906e5e5fe657307, type: 3}
       manaCost: 70
       audioClip: {fileID: 0}
@@ -67,7 +67,7 @@ MonoBehaviour:
     - id: 4
       name: Ice
       description: Ice area damage
-      icon: {fileID: 21300000, guid: 9978d417bb3f72846aeee391d50a5227, type: 3}
+      icon: {fileID: 21300000, guid: 052bff76a475ed84d8f9f0aa38e0dbab, type: 3}
       prefab: {fileID: 1305504078843124156, guid: 4d25289c482c44e759b062fdfd0a556b, type: 3}
       manaCost: 70
       audioClip: {fileID: 0}
@@ -77,7 +77,7 @@ MonoBehaviour:
     - id: 5
       name: Sword
       description: sword attack
-      icon: {fileID: 21300000, guid: 4a91707a31988fe4d81f96aed4aee297, type: 3}
+      icon: {fileID: 21300000, guid: 6dbd341abb3cbd647882bf743829adc1, type: 3}
       prefab: {fileID: 1305504078843124156, guid: 63c522c9404c34e62920f0d30105adb8, type: 3}
       manaCost: 0
       audioClip: {fileID: 0}

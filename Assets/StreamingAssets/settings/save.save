@@ -2,9 +2,9 @@
     "isStartGame": false,
     "currentSceneId": 1,
     "player": {
-        "currentHP": 17.399826049804689,
+        "currentHP": 1.0,
         "maxHp": 100.0,
-        "currentMP": 41.0,
+        "currentMP": 27.0,
         "maxMP": 1000.0,
         "level": 1,
         "CurrentSpells": [
@@ -13,10 +13,10 @@
                 "name": "Fire ",
                 "description": "Fire around area",
                 "icon": {
-                    "instanceID": 63486
+                    "instanceID": 37780
                 },
                 "prefab": {
-                    "instanceID": 108910
+                    "instanceID": 29430
                 },
                 "manaCost": 20.0,
                 "audioClip": {
@@ -31,10 +31,10 @@
                 "name": "Heal",
                 "description": "Reset your HP",
                 "icon": {
-                    "instanceID": 74224
+                    "instanceID": 42254
                 },
                 "prefab": {
-                    "instanceID": 216684
+                    "instanceID": 29484
                 },
                 "manaCost": 50.0,
                 "audioClip": {
@@ -49,10 +49,10 @@
                 "name": "Purple Death",
                 "description": "area dasmage",
                 "icon": {
-                    "instanceID": 69454
+                    "instanceID": 42110
                 },
                 "prefab": {
-                    "instanceID": 215368
+                    "instanceID": 29486
                 },
                 "manaCost": 30.0,
                 "audioClip": {
@@ -67,10 +67,10 @@
                 "name": "Void",
                 "description": "void damage on area",
                 "icon": {
-                    "instanceID": 68894
+                    "instanceID": 41332
                 },
                 "prefab": {
-                    "instanceID": 285064
+                    "instanceID": 29490
                 },
                 "manaCost": 70.0,
                 "audioClip": {
@@ -89,10 +89,10 @@
             "name": "Fire ",
             "description": "Fire around area",
             "icon": {
-                "instanceID": 63486
+                "instanceID": 37780
             },
             "prefab": {
-                "instanceID": 108910
+                "instanceID": 29430
             },
             "manaCost": 20.0,
             "audioClip": {
@@ -107,10 +107,10 @@
             "name": "Heal",
             "description": "Reset your HP",
             "icon": {
-                "instanceID": 74224
+                "instanceID": 42254
             },
             "prefab": {
-                "instanceID": 216684
+                "instanceID": 29484
             },
             "manaCost": 50.0,
             "audioClip": {
@@ -125,10 +125,10 @@
             "name": "Purple Death",
             "description": "area dasmage",
             "icon": {
-                "instanceID": 69454
+                "instanceID": 42110
             },
             "prefab": {
-                "instanceID": 215368
+                "instanceID": 29486
             },
             "manaCost": 30.0,
             "audioClip": {
@@ -143,10 +143,10 @@
             "name": "Void",
             "description": "void damage on area",
             "icon": {
-                "instanceID": 68894
+                "instanceID": 41332
             },
             "prefab": {
-                "instanceID": 285064
+                "instanceID": 29490
             },
             "manaCost": 70.0,
             "audioClip": {
@@ -161,10 +161,10 @@
             "name": "Ice",
             "description": "Ice area damage",
             "icon": {
-                "instanceID": 67364
+                "instanceID": 39308
             },
             "prefab": {
-                "instanceID": 282094
+                "instanceID": 29494
             },
             "manaCost": 70.0,
             "audioClip": {
@@ -179,10 +179,10 @@
             "name": "Sword",
             "description": "sword attack",
             "icon": {
-                "instanceID": 67352
+                "instanceID": 37240
             },
             "prefab": {
-                "instanceID": 326122
+                "instanceID": 29498
             },
             "manaCost": 0.0,
             "audioClip": {

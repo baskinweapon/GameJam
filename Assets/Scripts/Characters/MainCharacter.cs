@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class MainCharacter : MonoBehaviour {
 	private IAstarAI ai;
-	public GameObject moveToVisual; 
+	public GameObject moveToVisual;
+	public Animator animator;
 	
 	public void Start() {
 		moveToVisual.SetActive(false);

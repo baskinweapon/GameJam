@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4897661303259681792}
   - component: {fileID: 4728885993437875219}
   - component: {fileID: 7083235473769145663}
-  m_Layer: 0
+  - component: {fileID: 8881883043231467068}
+  m_Layer: 6
   m_Name: Spruce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,3 +112,35 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.71781063, y: 0.34270215}
   m_EdgeRadius: 0
+--- !u!114 &8881883043231467068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9089305309040927890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.3147335, y: -0.33253288, z: 0}
+  - {x: -0.21898842, y: 0.008420706, z: 0}
+  - {x: -1.1980476, y: 0.40967464, z: 0}
+  - {x: -1.727148, y: 1.1796939, z: 0}
+  - {x: 0.025831223, y: 2.9291606, z: 0}
+  - {x: 1.5144291, y: 1.3887334, z: 0}
+  - {x: 1.1934261, y: 0.20102262, z: 0}
+  - {x: 0.42301846, y: 0.024470806, z: 0}
+  - {x: 0.53943634, y: -0.30043244, z: 0}
+  m_ShapePathHash: 1079169631
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -405078

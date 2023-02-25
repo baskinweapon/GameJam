@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using General;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -44,7 +45,7 @@ public class Main : Singleton<Main> {
 		playerInfo.currentHP  = Mathf.Clamp(playerInfo.currentHP - value, 0, playerInfo.maxHp);
 		OnChangeHp?.Invoke();
 		if (playerInfo.currentHP == 0) {
-			StartNewGame();
+			Death();
 		}
 	}
 	
@@ -75,6 +76,11 @@ public class Main : Singleton<Main> {
 	
 	public void LevelUp() {
 		playerInfo.level += 1;
+	}
+
+	public void Death() {
+		character.animator.SetTrigger("Death");
+		CanvasMain.instance.OpenDeadthPanel();
 	}
 
 	//start new game
