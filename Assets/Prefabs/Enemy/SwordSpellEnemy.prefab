@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4743160684064327444}
   - component: {fileID: 330870134837953602}
   m_Layer: 10
-  m_Name: SwordSpell
+  m_Name: SwordSpellEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc68157ad7bcec40a40af35f56284cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 40
-  onPlayer: 0
+  damageValue: 10
+  onPlayer: 1
 --- !u!58 &330870134837953602
 CircleCollider2D:
   m_ObjectHideFlags: 0

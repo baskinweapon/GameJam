@@ -2,47 +2,47 @@
     "isStartGame": false,
     "currentSceneId": 1,
     "player": {
-        "currentHP": 100.0,
+        "currentHP": 2.0,
         "maxHp": 100.0,
-        "currentMP": 1000.0,
+        "currentMP": 623.0,
         "maxMP": 1000.0,
         "level": 1,
         "CurrentSpells": [
             {
                 "id": 0,
-                "name": "",
-                "description": "",
+                "name": "Fire ",
+                "description": "Fire around area",
                 "icon": {
-                    "instanceID": 0
+                    "instanceID": 63486
                 },
                 "prefab": {
-                    "instanceID": 0
+                    "instanceID": 108910
                 },
-                "manaCost": 0.0,
+                "manaCost": 20.0,
                 "audioClip": {
                     "instanceID": 0
                 },
-                "damage": 0.0,
-                "cooldown": 0.0,
+                "damage": 20.0,
+                "cooldown": 3.0,
                 "type": 0
             },
             {
-                "id": 0,
-                "name": "",
-                "description": "",
+                "id": 1,
+                "name": "Heal",
+                "description": "Reset your HP",
                 "icon": {
-                    "instanceID": 0
+                    "instanceID": 74224
                 },
                 "prefab": {
-                    "instanceID": 0
+                    "instanceID": 216684
                 },
-                "manaCost": 0.0,
+                "manaCost": 50.0,
                 "audioClip": {
                     "instanceID": 0
                 },
                 "damage": 0.0,
-                "cooldown": 0.0,
-                "type": 0
+                "cooldown": 3.0,
+                "type": 1
             },
             {
                 "id": 2,
@@ -82,7 +82,7 @@
             }
         ]
     },
-    "currentSpellId": 6,
+    "currentSpellId": 4,
     "spells": [
         {
             "id": 0,

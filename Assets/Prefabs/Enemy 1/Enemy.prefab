@@ -104,7 +104,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1000
+  m_LinearDrag: 0.61
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -155,7 +155,6 @@ MonoBehaviour:
   chaseDistance: 5
   startMovingDistance: 10
   startAttack: 2
-  dropItem: {fileID: 0}
   healthBar: {fileID: 7126537278908490528}
   spell:
     id: 0
@@ -168,7 +167,6 @@ MonoBehaviour:
     damage: 0
     cooldown: 0
     type: 0
-  cooldownDuration: 1
 --- !u!114 &7126537278402626614
 MonoBehaviour:
   m_ObjectHideFlags: 0

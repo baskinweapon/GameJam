@@ -12,17 +12,18 @@ public class Main : Singleton<Main> {
 	public PlayerInfo playerInfo;
 	public static Action OnChangeSpell;
 	public static Action OnChangeMana;
+	public static Action OnChangeHp;
 
 	protected override void Awake() {
 		base.Awake();
 		settings.LoadFromFile();
 		playerInfo = settings.s.player;
 		if (playerInfo.CurrentSpells.Equals(null)) {
+			SetBaseSpells();
 		}
 		if (settings.s.isStartGame) {
 			
 		}
-		SetBaseSpells();
 		
 		SceneManager.LoadScene(settings.s.currentSceneId);
 		StartCoroutine(PermanentResp());
@@ -41,6 +42,7 @@ public class Main : Singleton<Main> {
 
 	public void minusHP(float value) {
 		playerInfo.currentHP  = Mathf.Clamp(playerInfo.currentHP - value, 0, playerInfo.maxHp);
+		OnChangeHp?.Invoke();
 		if (playerInfo.currentHP == 0) {
 			StartNewGame();
 		}
@@ -63,7 +65,6 @@ public class Main : Singleton<Main> {
 
 	public void ChangeCurrentSpell(int _id, Spell spell) {
 		playerInfo.CurrentSpells[_id] = spell;
-		settings.s.currentSpellId = playerInfo.CurrentSpells[_id].id;
 		OnChangeSpell?.Invoke();
 	}
 	
@@ -79,6 +80,8 @@ public class Main : Singleton<Main> {
 	//start new game
 	public void StartNewGame() {
 		SetBaseSpells();
+		playerInfo.currentHP = playerInfo.maxHp;
+		playerInfo.currentMP = playerInfo.maxMP;
 		SceneManager.LoadScene(1);
 	}
 

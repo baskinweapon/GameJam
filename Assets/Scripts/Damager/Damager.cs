@@ -11,10 +11,11 @@ public class Damager : MonoBehaviour {
       Destroy(gameObject, 1f);
    }
 
-   private void OnCollisionEnter2D(Collision2D col) {
+   private void OnTriggerEnter2D(Collider2D col) {
       if (onPlayer) {
          if (col.gameObject.layer == LayerMask.NameToLayer("Player")) {
-            col.gameObject.GetComponent<EnemyAI>().ChangeHealth(damageValue);
+            Debug.Log("Damage to player");
+            Main.instance.minusHP(damageValue);
          }
       }
       else {
@@ -23,6 +24,4 @@ public class Damager : MonoBehaviour {
          }
       }
    }
-   
-   
 }

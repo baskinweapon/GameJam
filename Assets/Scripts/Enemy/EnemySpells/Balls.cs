@@ -28,7 +28,8 @@ public class Balls : EnemySpellBase {
         int i = 0;
         while (time >= 0) {
             time -= Time.deltaTime;
-            balls[i].transform.DOMove(Main.instance.character.transform.position, 2f);
+            if (balls[i])
+                balls[i].transform.DOMove(Main.instance.character.transform.position, 2f);
             yield return new WaitForSeconds(0.3f);
         }
     }
