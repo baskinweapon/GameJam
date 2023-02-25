@@ -18,7 +18,7 @@ public class Main : Singleton<Main> {
 		base.Awake();
 		settings.LoadFromFile();
 		playerInfo = settings.s.player;
-		if (playerInfo.CurrentSpells.Equals(null)) {
+		if (playerInfo.CurrentSpells.Length == 0) {
 			SetBaseSpells();
 		}
 		if (settings.s.isStartGame) {

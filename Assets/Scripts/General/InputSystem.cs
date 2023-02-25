@@ -17,6 +17,7 @@ public class InputSystem : Singleton<InputSystem> {
     public static Action<int> OnCastThirdAbility;
     public static Action<int> OnCastFourAbility;
 
+    public static Action OnClickEsc;
     public static Action OnRightMouseClick;
     public static Action OnMouseClick;
 
@@ -42,6 +43,7 @@ public class InputSystem : Singleton<InputSystem> {
 
     public bool isPaused;
     public void Pause(InputAction.CallbackContext ctx = default) {
+        OnClickEsc?.Invoke();
         if (!isPaused) {
             isPaused = true;
             ChangeState(GameState.Pause);
