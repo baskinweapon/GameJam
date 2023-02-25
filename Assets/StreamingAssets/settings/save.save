@@ -2,9 +2,9 @@
     "isStartGame": false,
     "currentSceneId": 1,
     "player": {
-        "currentHP": 11.399826049804688,
+        "currentHP": 17.399826049804689,
         "maxHp": 100.0,
-        "currentMP": 25.0,
+        "currentMP": 41.0,
         "maxMP": 1000.0,
         "level": 1,
         "CurrentSpells": [
@@ -82,7 +82,7 @@
             }
         ]
     },
-    "currentSpellId": 4,
+    "currentSpellId": 6,
     "spells": [
         {
             "id": 0,

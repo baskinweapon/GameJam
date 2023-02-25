@@ -6,18 +6,17 @@ namespace General {
         [SerializeField]
         private GameObject swapPanel;
 
-        public void Start() {
-            InputSystem.OnClickEsc += ClickEsc;
-        }
-
+        public GameObject currentOpenWindow;
+        
         public void OpenSwapPanel(Spell spell) {
-            InputSystem.instance.ChangeState(GameState.Dialog);
+            InputSystem.instance.ChangeState(GameState.Pause);
+            currentOpenWindow = swapPanel;
             swapPanel.SetActive(true);
             var panel = swapPanel.GetComponent<SwapPanel>();
             panel.Swap(spell);
         }
 
-        public void ClickEsc() {
+        public void CloseCurrentWindow() {
             if (swapPanel.activeSelf) {
                 CloseSwapPanel();
             }
@@ -25,11 +24,8 @@ namespace General {
         
         public void CloseSwapPanel() {
             InputSystem.instance.ChangeState(GameState.Play);
+            currentOpenWindow = null;
             swapPanel.SetActive(false);
-        }
-
-        private void OnDisable() {
-            InputSystem.OnClickEsc -= ClickEsc;
         }
     }
 }

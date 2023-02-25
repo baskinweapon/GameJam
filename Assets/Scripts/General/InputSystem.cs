@@ -1,4 +1,5 @@
 using System;
+using General;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
@@ -44,6 +45,10 @@ public class InputSystem : Singleton<InputSystem> {
     public bool isPaused;
     public void Pause(InputAction.CallbackContext ctx = default) {
         OnClickEsc?.Invoke();
+        if (CanvasMain.instance.currentOpenWindow) {
+            CanvasMain.instance.CloseCurrentWindow();
+            return;
+        }
         if (!isPaused) {
             isPaused = true;
             ChangeState(GameState.Pause);
@@ -54,6 +59,7 @@ public class InputSystem : Singleton<InputSystem> {
             OnPlay?.Invoke();
         }
     }
+    
     
     private void Update() {
         mousePosition = Input.mousePosition;
