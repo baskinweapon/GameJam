@@ -2,28 +2,28 @@
     "isStartGame": false,
     "currentSceneId": 1,
     "player": {
-        "currentHP": 38.0,
+        "currentHP": 138.0,
         "maxHp": 100.0,
-        "currentMP": 54.0,
-        "maxMP": 1000.0,
+        "currentMP": 479.0,
+        "maxMP": 200.0,
         "level": 1,
         "CurrentSpells": [
             {
                 "id": 0,
-                "name": "",
-                "description": "",
+                "name": "Fire ",
+                "description": "Fire around area",
                 "icon": {
-                    "instanceID": 0
+                    "instanceID": 63486
                 },
                 "prefab": {
-                    "instanceID": 0
+                    "instanceID": 108910
                 },
-                "manaCost": 0.0,
+                "manaCost": 20.0,
                 "audioClip": {
                     "instanceID": 0
                 },
-                "damage": 0.0,
-                "cooldown": 0.0,
+                "damage": 20.0,
+                "cooldown": 3.0,
                 "type": 0
             },
             {
@@ -31,17 +31,17 @@
                 "name": "Heal",
                 "description": "Reset your HP",
                 "icon": {
-                    "instanceID": 42254
+                    "instanceID": 74224
                 },
                 "prefab": {
-                    "instanceID": 29484
+                    "instanceID": 216684
                 },
                 "manaCost": 50.0,
                 "audioClip": {
                     "instanceID": 0
                 },
                 "damage": 0.0,
-                "cooldown": 3.0,
+                "cooldown": 15.0,
                 "type": 1
             },
             {
@@ -49,56 +49,56 @@
                 "name": "Purple Death",
                 "description": "area dasmage",
                 "icon": {
-                    "instanceID": 42110
+                    "instanceID": 69454
                 },
                 "prefab": {
-                    "instanceID": 29486
+                    "instanceID": 215368
                 },
                 "manaCost": 30.0,
                 "audioClip": {
                     "instanceID": 0
                 },
                 "damage": 100.0,
-                "cooldown": 3.0,
+                "cooldown": 7.0,
                 "type": 0
             },
             {
                 "id": 3,
-                "name": "Void",
-                "description": "void damage on area",
+                "name": "Shield",
+                "description": "create shield",
                 "icon": {
-                    "instanceID": 41332
+                    "instanceID": 68814
                 },
                 "prefab": {
-                    "instanceID": 29490
+                    "instanceID": 73840
                 },
                 "manaCost": 70.0,
                 "audioClip": {
                     "instanceID": 0
                 },
-                "damage": 100.0,
-                "cooldown": 5.0,
+                "damage": 0.0,
+                "cooldown": 20.0,
                 "type": 0
             }
         ]
     },
-    "currentSpellId": 6,
+    "currentSpellId": 4,
     "spells": [
         {
             "id": 0,
             "name": "Fire ",
             "description": "Fire around area",
             "icon": {
-                "instanceID": 37780
+                "instanceID": 63486
             },
             "prefab": {
-                "instanceID": 29430
+                "instanceID": 108910
             },
             "manaCost": 20.0,
             "audioClip": {
                 "instanceID": 0
             },
-            "damage": 50.0,
+            "damage": 20.0,
             "cooldown": 3.0,
             "type": 0
         },
@@ -107,17 +107,17 @@
             "name": "Heal",
             "description": "Reset your HP",
             "icon": {
-                "instanceID": 42254
+                "instanceID": 74224
             },
             "prefab": {
-                "instanceID": 29484
+                "instanceID": 216684
             },
             "manaCost": 50.0,
             "audioClip": {
                 "instanceID": 0
             },
             "damage": 0.0,
-            "cooldown": 3.0,
+            "cooldown": 15.0,
             "type": 1
         },
         {
@@ -125,72 +125,54 @@
             "name": "Purple Death",
             "description": "area dasmage",
             "icon": {
-                "instanceID": 42110
+                "instanceID": 69454
             },
             "prefab": {
-                "instanceID": 29486
+                "instanceID": 215368
             },
             "manaCost": 30.0,
             "audioClip": {
                 "instanceID": 0
             },
             "damage": 100.0,
-            "cooldown": 3.0,
+            "cooldown": 7.0,
             "type": 0
         },
         {
             "id": 3,
-            "name": "Void",
-            "description": "void damage on area",
+            "name": "Shield",
+            "description": "create shield",
             "icon": {
-                "instanceID": 41332
+                "instanceID": 68814
             },
             "prefab": {
-                "instanceID": 29490
+                "instanceID": 73840
             },
             "manaCost": 70.0,
             "audioClip": {
                 "instanceID": 0
             },
-            "damage": 100.0,
-            "cooldown": 5.0,
+            "damage": 0.0,
+            "cooldown": 20.0,
             "type": 0
         },
         {
             "id": 4,
-            "name": "Ice",
-            "description": "Ice area damage",
+            "name": "new ability",
+            "description": "create shield",
             "icon": {
-                "instanceID": 39308
+                "instanceID": 67364
             },
             "prefab": {
-                "instanceID": 29494
+                "instanceID": 73840
             },
             "manaCost": 70.0,
             "audioClip": {
                 "instanceID": 0
             },
-            "damage": 70.0,
-            "cooldown": 2.0,
+            "damage": 0.0,
+            "cooldown": 20.0,
             "type": 0
-        },
-        {
-            "id": 5,
-            "name": "Sword",
-            "description": "sword attack",
-            "icon": {
-                "instanceID": 37240
-            },
-            "prefab": {
-                "instanceID": 29498
-            },
-            "manaCost": 0.0,
-            "audioClip": {
-                "instanceID": 0
-            },
-            "damage": 30.0,
-            "cooldown": 1.0,
-            "type": 1
         }
     ]
 }
