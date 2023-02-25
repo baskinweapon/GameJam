@@ -3,7 +3,8 @@ using UnityEngine;
 
 namespace General {
     public class CanvasMain : Singleton<CanvasMain> {
-        public GameObject swapPanel;
+        [SerializeField]
+        private GameObject swapPanel;
         
         public void OpenSwapPanel(Spell spell) {
             InputSystem.instance.ChangeState(GameState.Dialog);

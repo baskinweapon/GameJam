@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Pathfinding;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -23,6 +19,8 @@ public class EnemyAI : MonoBehaviour {
     public Image healthBar;
     private IAstarAI ai;
 
+    public Spell spell;
+
 
     private void Start() {
         ai = GetComponent<IAstarAI>();
@@ -32,20 +30,30 @@ public class EnemyAI : MonoBehaviour {
     }
 
     public void LateUpdate() {
+        if (attacking) return;
         if (ai != null && target != (Vector2)ai.destination) ai.destination = target;
     }
-    
+
+    private bool attacking;
     private void GetTarget() {
+        attacking = false;
         var distance = Vector2.Distance(Main.instance.character.transform.position, transform.position);
         if (distance <= startMovingDistance) {
             target = transform.position + new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), 0);
         } if (distance <= chaseDistance) {
             target = Main.instance.character.transform.position;
-        } if (distance <= startAttack) {
+        }
+
+        if (distance <= startAttack) {
             ai.destination = transform.position;
             target = ai.destination;
+            attacking = true;
+            Attack();
         }
-        
+    }
+
+    public void Attack() {
+        GetComponent<EnemySpellBase>().StartAttack();
     }
 
     private Vector2 target;

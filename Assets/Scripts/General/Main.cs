@@ -11,6 +11,7 @@ public class Main : Singleton<Main> {
 
 	public PlayerInfo playerInfo;
 	public static Action OnChangeSpell;
+	public static Action OnChangeMana;
 
 	protected override void Awake() {
 		base.Awake();
@@ -31,8 +32,10 @@ public class Main : Singleton<Main> {
 	IEnumerator PermanentResp() {
 		while (true) {
 			yield return sec;
-			playerInfo.currentHP += 1;
-			playerInfo.currentMP += 1;
+			if (playerInfo.currentHP < playerInfo.maxHp)
+				playerInfo.currentHP += 1;
+			if (playerInfo.currentMP < playerInfo.maxMP)
+				playerInfo.currentMP += 1;
 		}
 	}
 
@@ -66,6 +69,7 @@ public class Main : Singleton<Main> {
 	
 	public void ChangeMP(float value) {
 		playerInfo.currentMP= Mathf.Clamp(playerInfo.currentMP - value, 0, playerInfo.maxMP);
+		OnChangeMana?.Invoke();
 	}
 	
 	public void LevelUp() {

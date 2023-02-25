@@ -1,3 +1,4 @@
+using General;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +20,7 @@ public class SwapPanel : MonoBehaviour {
    public void Set(int _id) {
       id = _id;
       Main.instance.ChangeCurrentSpell(_id, spell);
+      CanvasMain.instance.CloseSwapPanel();
    }
    
    

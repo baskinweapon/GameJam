@@ -12,8 +12,9 @@ public class SpellUI : MonoBehaviour {
    public void Start() {
       SetImages();
       Main.OnChangeSpell += SetImages;
+      Main.OnChangeMana += SetImages;
    }
-
+   
    public void SetImages() {
       counter = 0;
       foreach (var images in panelsImages) {
@@ -37,5 +38,6 @@ public class SpellUI : MonoBehaviour {
    
    private void OnDisable() {
       Main.OnChangeSpell += SetImages;
+      Main.OnChangeMana -= SetImages;
    }
 }

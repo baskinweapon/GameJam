@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +16,12 @@ public class Cooldown : MonoBehaviour {
    
    private void Start() {
       image.fillAmount = 0;
+      Main.OnChangeSpell += ChangeSpell;
       SetSpell(Main.instance.playerInfo.CurrentSpells[count]);
+   }
+
+   private void ChangeSpell() {
+      spell = Main.instance.playerInfo.CurrentSpells[count];
    }
 
    public void SetSpell(Spell _spell) {
@@ -35,9 +41,11 @@ public class Cooldown : MonoBehaviour {
 
    public void CastAbility() {
       var pref = Instantiate(spell.prefab);
+      Main.instance.ChangeMP(spell.manaCost);
       switch (spell.type) {
          case SpellType.areaDamage:
             pref.transform.position = Camera.main.ScreenToWorldPoint(InputSystem.instance.GetMousePosition());
+            pref.transform.position = new Vector3(pref.transform.position.x, pref.transform.position.y, 0);
             break;
          case SpellType.onPlayer:
             pref.transform.parent = Main.instance.character.transform;
@@ -63,5 +71,9 @@ public class Cooldown : MonoBehaviour {
       text.text = "";
       time = 0;
       isCasting = false;
+   }
+
+   private void OnDisable() {
+      Main.OnChangeSpell -= ChangeSpell;
    }
 }
