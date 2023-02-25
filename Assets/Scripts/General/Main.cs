@@ -88,6 +88,7 @@ public class Main : Singleton<Main> {
 		SetBaseSpells();
 		playerInfo.currentHP = playerInfo.maxHp;
 		playerInfo.currentMP = playerInfo.maxMP;
+		CanvasMain.instance.CloseAllWindow();
 		SceneManager.LoadScene(1);
 	}
 
