@@ -15,9 +15,10 @@ public class SpellDrop : MonoBehaviour {
     }
 
     public void OnTriggerEnter2D(Collider2D col) {
-        if (!(Main.instance.settings.s.spells.Length > Main.instance.settings.s.currentSpellId)) return; 
-        CanvasMain.instance.OpenSwapPanel(spell); 
-        Destroy(gameObject);
+        if (col.gameObject.layer == LayerMask.NameToLayer("Player")) {
+            CanvasMain.instance.OpenSwapPanel(spell); 
+            Destroy(gameObject);
+        }
     }
 
     

@@ -3,6 +3,7 @@ using General;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.SceneManagement;
 
 public enum GameState {
     Pause,
@@ -45,7 +46,7 @@ public class InputSystem : Singleton<InputSystem> {
     public bool isPaused;
     public void Pause(InputAction.CallbackContext ctx = default) {
         OnClickEsc?.Invoke();
-        if (CanvasMain.instance.currentOpenWindow) {
+        if (CanvasMain.instance.currentOpenWindow || SceneManager.GetActiveScene().buildIndex == 1) {
             CanvasMain.instance.CloseCurrentWindow();
             return;
         }

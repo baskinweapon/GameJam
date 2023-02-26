@@ -69,7 +69,12 @@ public class EnemyAI : MonoBehaviour {
     }
 
     public void Attack() {
-        PlaySound(attackClips[Random.Range(0, attackClips.Length)]);
+        if (attackClips.Length == 1) {
+            PlaySound(attackClips[0]);    
+        }
+        else {
+            PlaySound(attackClips[Random.Range(0, attackClips.Length)]);
+        }
         GetComponent<EnemySpellBase>().StartAttack();
         StartCoroutine(AttackProcess());
     }
@@ -96,8 +101,11 @@ public class EnemyAI : MonoBehaviour {
         PlaySound(deadthClip[Random.Range(0, deadthClip.Length)]);
         Debug.Log("I death");
         if (dropItem) {
-            var drop = Instantiate(dropItem);
-            drop.transform.position = transform.position;
+            var r = Random.Range(0, 100);
+            if (r > 50) {
+                var drop = Instantiate(dropItem);
+                drop.transform.position = transform.position;
+            }
         }
         StopAllCoroutines();
         transform.Rotate(0, 0, 90);

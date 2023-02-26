@@ -7,35 +7,28 @@ public class Balls : EnemySpellBase {
     public GameObject ballPref;
 
     public float lifeTime = 3;
-    private List<GameObject> balls = new List<GameObject>();
-    
-    
+    public float speed;
     
     public override void StartAttack() {
-        balls = new List<GameObject>();
-        for (int i = 0; i < 10; i++) {
-            var nb = Instantiate(ballPref);
-            nb.transform.position = transform.position;
-            balls.Add(nb);
-        }
+        var ball = Instantiate(ballPref);
+        ball.transform.position = transform.position;
 
-        StartCoroutine(AttackProcess());
+        StartCoroutine(AttackProcess(ball));
     }
 
     private float time;
-    IEnumerator AttackProcess() {
+    IEnumerator AttackProcess(GameObject ball) {
         time = lifeTime;
-        int i = 0;
+        Vector3 pos = Main.instance.character.transform.position;
         while (time >= 0) {
             time -= Time.deltaTime;
-            if (balls[i])
-                balls[i].transform.DOMove(Main.instance.character.transform.position, 2f);
-            yield return new WaitForSeconds(0.3f);
+            if (ball) {
+                var dir = pos - ball.transform.position;
+                ball.transform.position += speed * Time.deltaTime * dir.normalized;
+            }
+            yield return null;
         }
+        Destroy(ball.gameObject);
     }
     
-    // Update is called once per frame
-    void Update() {
-        
-    }
 }

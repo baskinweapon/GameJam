@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerDeath : MonoBehaviour {
@@ -26,6 +27,7 @@ public class PlayerDeath : MonoBehaviour {
     }
 
     public void MainMenu() {
-        
+        Destroy(Main.instance.character);
+        SceneManager.LoadScene(1);
     }
 }

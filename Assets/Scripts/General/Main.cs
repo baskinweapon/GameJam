@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using DefaultNamespace;
 using General;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,6 +8,8 @@ using Random = UnityEngine.Random;
 
 public class Main : Singleton<Main> {
 	public int firstSceneID;
+
+	public GameObject playerPrefab;
 	
 	public MainCharacter character;
 	public SettingsAsset settings;
@@ -60,8 +63,7 @@ public class Main : Singleton<Main> {
 
 	public void SetBaseSpells() {
 		playerInfo.CurrentSpells = new Spell[4];
-		settings.s.currentSpellId = settings.s.currentSpellId >= 4 ? settings.s.currentSpellId - 4
-																	: settings.s.currentSpellId;
+		settings.s.currentSpellId = 0;
 		for (int i = settings.s.currentSpellId; i < playerInfo.CurrentSpells.Length; i++) {
 			playerInfo.CurrentSpells[i] = settings.s.spells[i];
 			settings.s.currentSpellId = playerInfo.CurrentSpells[i].id;
@@ -93,12 +95,24 @@ public class Main : Singleton<Main> {
 
 	//start new game
 	public void StartNewGame() {
+		Audio.instance.StartBackgroundMusic(Audio.instance.backgtoundMusic[Audio.instance.counterBG]);
+		if (character) Destroy(character.gameObject);
+		var ch = Instantiate(playerPrefab);
+		character = ch.GetComponent<MainCharacter>();
+		character.gameObject.SetActive(true);
 		isDeath = false;
 		SetBaseSpells();
 		playerInfo.currentHP = playerInfo.maxHp;
 		playerInfo.currentMP = playerInfo.maxMP;
 		CanvasMain.instance.CloseAllWindow();
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene(2);
+	}
+
+
+	public void LoadGame() {
+		character.gameObject.SetActive(true);
+		CanvasMain.instance.CloseAllWindow();
+		SceneManager.LoadScene(2);
 	}
 
 	public void PlayCastSound(Spell spell) {

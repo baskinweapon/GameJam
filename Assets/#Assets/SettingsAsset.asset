@@ -16,57 +16,13 @@ MonoBehaviour:
     isStartGame: 0
     currentSceneId: 1
     player:
-      currentHP: 40
+      currentHP: 100
       maxHp: 100
-      currentMP: 1000
+      currentMP: 653
       maxMP: 1000
       level: 1
-      CurrentSpells:
-      - id: 0
-        name: 'Fire '
-        description: Fire around area
-        icon: {fileID: 21300000, guid: cc06a2c7bebb9384a97068dc9a95a4ba, type: 3}
-        prefab: {fileID: 8976149393850198116, guid: 4af97dc5417424611848dd7776866129, type: 3}
-        manaCost: 20
-        audioClip:
-        - {fileID: 8300000, guid: aa58578ce8d464833a02af4bc3bfa4ee, type: 3}
-        damage: 200
-        cooldown: 3
-        type: 0
-      - id: 1
-        name: Heal
-        description: Reset your HP
-        icon: {fileID: 21300000, guid: 14f3529bfee9bd14a87f2eb48a6bcccc, type: 3}
-        prefab: {fileID: 6021011766212827887, guid: 490dd9c9888d840a3b97b63140be5449, type: 3}
-        manaCost: 50
-        audioClip:
-        - {fileID: 8300000, guid: ff0fb8dfef02047e08817075d54c4277, type: 3}
-        damage: 0
-        cooldown: 3
-        type: 1
-      - id: 2
-        name: Purple Death
-        description: area dasmage
-        icon: {fileID: 21300000, guid: 5ad007262d78e96459d4e9397a85d4b8, type: 3}
-        prefab: {fileID: 1305504078843124156, guid: 642247778faf94045823ea1db3cd650e, type: 3}
-        manaCost: 30
-        audioClip:
-        - {fileID: 8300000, guid: 43ea6f951486344afb106ff19678a75c, type: 3}
-        damage: 100
-        cooldown: 3
-        type: 0
-      - id: 3
-        name: Void
-        description: void damage on area
-        icon: {fileID: 21300000, guid: f19fb3c8d57c1bc4eb997cc8a40e4245, type: 3}
-        prefab: {fileID: 1305504078843124156, guid: 5f4de70dea5a843ec906e5e5fe657307, type: 3}
-        manaCost: 70
-        audioClip:
-        - {fileID: 8300000, guid: 607c2927f784e435c8dcf1b8f131b2ad, type: 3}
-        damage: 100
-        cooldown: 5
-        type: 0
-    currentSpellId: 6
+      CurrentSpells: []
+    currentSpellId: 0
     spells:
     - id: 0
       name: 'Fire '
