@@ -5,12 +5,10 @@ public class Damager : MonoBehaviour {
    
    public float damageValue;
    public bool onPlayer;
-
-   public float destroyTime = 1f;
    
    
    private void OnEnable() {
-      Destroy(gameObject, destroyTime);
+      Destroy(gameObject, 1f);
    }
    
    private void OnTriggerEnter2D(Collider2D col) {

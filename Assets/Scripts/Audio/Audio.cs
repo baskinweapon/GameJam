@@ -6,12 +6,10 @@ namespace DefaultNamespace {
     
     public class Audio : Singleton<Audio> {
         public AudioSource source;
-        public AudioSource effect;
 
         public AudioClip[] backgtoundMusic;
         public AudioClip[] battleMusic;
         public AudioClip[] mainMenuMusic;
-        public AudioClip[] effectClip;
         
         public void StartBattleMusic() {
         
@@ -21,8 +19,6 @@ namespace DefaultNamespace {
         public void StartBackgroundMusic(AudioClip clip) {
             source.clip = clip;
             source.Play();
-            effect.clip = effectClip[0];
-            effect.Play();
             StartCoroutine(RepeatMusic(clip));
         }
 

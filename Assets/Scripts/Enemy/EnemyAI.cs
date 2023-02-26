@@ -18,7 +18,6 @@ public class EnemyAI : MonoBehaviour {
     public float startAttack;
 
     public GameObject dropItem;
-    public bool staticBody;
 
     public AudioSource source;
     public AudioClip[] attackClips;
@@ -43,7 +42,7 @@ public class EnemyAI : MonoBehaviour {
     }
 
     public void LateUpdate() {
-        if (attacking || staticBody) {
+        if (attacking) {
             ai.canMove = false;
             return;
         }

@@ -159,7 +159,7 @@ MonoBehaviour:
   dropItem: {fileID: 0}
   source: {fileID: 5849756931120608543}
   attackClips:
-  - {fileID: 8300000, guid: b897c12c5872d4d0b9995667a1406b51, type: 3}
+  - {fileID: 8300000, guid: 607c2927f784e435c8dcf1b8f131b2ad, type: 3}
   deadthClip:
   - {fileID: 8300000, guid: 9e631eefeb8f2446aa0fca9faa95485d, type: 3}
   - {fileID: 8300000, guid: f3a8902cf4a1c431d82dd4750b3f66f6, type: 3}
