@@ -3,12 +3,16 @@ using System.Collections;
 using General;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class Main : Singleton<Main> {
 	public int firstSceneID;
 	
 	public MainCharacter character;
 	public SettingsAsset settings;
+
+	public AudioSource spellCastSource;
+	public AudioClip gameOverSound;
 
 	public PlayerInfo playerInfo;
 	public static Action OnChangeSpell;
@@ -45,6 +49,7 @@ public class Main : Singleton<Main> {
 		playerInfo.currentHP  = Mathf.Clamp(playerInfo.currentHP - value, 0, playerInfo.maxHp);
 		OnChangeHp?.Invoke();
 		if (playerInfo.currentHP == 0) {
+			if (isDeath) return;
 			Death();
 		}
 	}
@@ -78,18 +83,27 @@ public class Main : Singleton<Main> {
 		playerInfo.level += 1;
 	}
 
+	public bool isDeath;
 	public void Death() {
+		isDeath = true;
 		character.animator.SetTrigger("Death");
+		spellCastSource.PlayOneShot(gameOverSound);
 		CanvasMain.instance.OpenDeadthPanel();
 	}
 
 	//start new game
 	public void StartNewGame() {
+		isDeath = false;
 		SetBaseSpells();
 		playerInfo.currentHP = playerInfo.maxHp;
 		playerInfo.currentMP = playerInfo.maxMP;
 		CanvasMain.instance.CloseAllWindow();
 		SceneManager.LoadScene(1);
+	}
+
+	public void PlayCastSound(Spell spell) {
+		if (spell.audioClip.Length == 0) return;
+		spellCastSource.PlayOneShot(spell.audioClip[Random.Range(0, spell.audioClip.Length - 1)]);
 	}
 
 	private void OnApplicationQuit() {

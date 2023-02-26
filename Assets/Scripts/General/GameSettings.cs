@@ -15,7 +15,7 @@ public class Spell {
     public Sprite icon;
     public GameObject prefab;
     public float manaCost;
-    public AudioClip audioClip;
+    public AudioClip[] audioClip;
     public float damage;
     public float cooldown;
     public SpellType type;

@@ -162,6 +162,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4743160684064327444, guid: 15d5f96bc1dd940a699857888806949f, type: 3}
+      propertyPath: damageValue
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8924279988252902561, guid: 15d5f96bc1dd940a699857888806949f, type: 3}
       propertyPath: m_RootOrder
       value: 0

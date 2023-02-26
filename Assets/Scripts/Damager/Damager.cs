@@ -10,7 +10,7 @@ public class Damager : MonoBehaviour {
    private void OnEnable() {
       Destroy(gameObject, 1f);
    }
-
+   
    private void OnTriggerEnter2D(Collider2D col) {
       if (onPlayer) {
          if (col.gameObject.layer == LayerMask.NameToLayer("Player")) {

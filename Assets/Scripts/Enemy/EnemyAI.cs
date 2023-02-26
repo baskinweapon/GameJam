@@ -19,6 +19,12 @@ public class EnemyAI : MonoBehaviour {
 
     public GameObject dropItem;
 
+    public AudioSource source;
+    public AudioClip[] attackClips;
+    public AudioClip[] deadthClip;
+
+    private AudioSource _audioSource;
+
     public Image healthBar;
     private IAstarAI ai;
 
@@ -29,6 +35,8 @@ public class EnemyAI : MonoBehaviour {
     private void Start() {
         ai = GetComponent<IAstarAI>();
         if (ai != null) ai.onSearchPath += LateUpdate;
+
+        _audioSource = GetComponent<AudioSource>();
         
         InvokeRepeating(nameof(GetTarget),0, 0.5f);
     }
@@ -61,6 +69,7 @@ public class EnemyAI : MonoBehaviour {
     }
 
     public void Attack() {
+        PlaySound(attackClips[Random.Range(0, attackClips.Length)]);
         GetComponent<EnemySpellBase>().StartAttack();
         StartCoroutine(AttackProcess());
     }
@@ -78,15 +87,21 @@ public class EnemyAI : MonoBehaviour {
             Death();
         }
     }
+
+    public void PlaySound(AudioClip clip) {
+        _audioSource.PlayOneShot(clip);
+    }
     
     public void Death() {
+        PlaySound(deadthClip[Random.Range(0, deadthClip.Length)]);
         Debug.Log("I death");
         if (dropItem) {
             var drop = Instantiate(dropItem);
             drop.transform.position = transform.position;
         }
         StopAllCoroutines();
-        Destroy(gameObject);
+        transform.Rotate(0, 0, 90);
+        Destroy(gameObject, 1f);
     }
 
     private void OnDisable() {

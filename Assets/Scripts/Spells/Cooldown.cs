@@ -42,6 +42,7 @@ public class Cooldown : MonoBehaviour {
    public void CastAbility() {
       var pref = Instantiate(spell.prefab);
       Main.instance.ChangeMP(spell.manaCost);
+      Main.instance.PlayCastSound(spell);
       switch (spell.type) {
          case SpellType.areaDamage:
             pref.transform.position = Camera.main.ScreenToWorldPoint(InputSystem.instance.GetMousePosition());
