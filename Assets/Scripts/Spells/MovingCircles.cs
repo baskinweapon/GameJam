@@ -4,7 +4,7 @@ using UnityEngine;
 
 using UnityEngine;
 
-public class MovingCircles : MonoBehaviour
+public class MovingCircles : EnemySpellBase
 {
     [SerializeField] private GameObject circlePrefab;
     [SerializeField] private float radius = 3f;
@@ -40,6 +40,10 @@ public class MovingCircles : MonoBehaviour
         GameObject circle = Instantiate(circlePrefab, position, Quaternion.identity);
         CircleMover mover = circle.GetComponent<CircleMover>();
         mover.Initialize(size, lifetime, distanceTraveled);
+    }
+
+    public override void StartAttack() {
+        
     }
 }
 

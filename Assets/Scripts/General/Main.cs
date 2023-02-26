@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Cinemachine;
 using DefaultNamespace;
 using General;
 using UnityEngine;
@@ -8,6 +9,7 @@ using Random = UnityEngine.Random;
 
 public class Main : Singleton<Main> {
 	public int firstSceneID;
+	public CinemachineVirtualCamera camera;
 
 	public GameObject playerPrefab;
 	
@@ -100,6 +102,8 @@ public class Main : Singleton<Main> {
 		var ch = Instantiate(playerPrefab);
 		character = ch.GetComponent<MainCharacter>();
 		character.gameObject.SetActive(true);
+		camera.Follow = character.transform;
+		camera.LookAt = character.transform;
 		isDeath = false;
 		SetBaseSpells();
 		playerInfo.currentHP = playerInfo.maxHp;

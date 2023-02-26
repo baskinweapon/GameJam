@@ -1,0 +1,61 @@
+{
+    "currentSpellId": 0,
+    "spells": [
+        {
+            "id": 0,
+            "name": "Fire ",
+            "description": "Fire around area",
+            "icon": {
+                "instanceID": 63486
+            },
+            "prefab": {
+                "instanceID": 108910
+            },
+            "manaCost": 20.0,
+            "damage": 20.0,
+            "cooldown": 3.0
+        },
+        {
+            "id": 0,
+            "name": "Heal",
+            "description": "Reset your HP",
+            "icon": {
+                "instanceID": 75184
+            },
+            "prefab": {
+                "instanceID": 73468
+            },
+            "manaCost": 50.0,
+            "damage": 0.0,
+            "cooldown": 12.0
+        },
+        {
+            "id": 0,
+            "name": "Purple Death",
+            "description": "area dasmage",
+            "icon": {
+                "instanceID": 69454
+            },
+            "prefab": {
+                "instanceID": 68836
+            },
+            "manaCost": 30.0,
+            "damage": 100.0,
+            "cooldown": 7.0
+        },
+        {
+            "id": 0,
+            "name": "Shield",
+            "description": "create shield",
+            "icon": {
+                "instanceID": 68814
+            },
+            "prefab": {
+                "instanceID": 73840
+            },
+            "manaCost": 70.0,
+            "damage": 0.0,
+            "cooldown": 20.0
+        }
+    ]
+}
