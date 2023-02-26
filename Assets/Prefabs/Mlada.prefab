@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8955476519032903668}
   - component: {fileID: 8955476519032903669}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: WelcomeMessage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -382,7 +382,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 1.5
 --- !u!114 &8955476519671312250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,5 +398,6 @@ MonoBehaviour:
   _personality: {fileID: 11400000, guid: fe608e88aba1a4baa9dd558f547f15f8, type: 2}
   _movePoints: []
   _checkPointDelay: 5
+  _distanceForTolk: 5
   _canvas: {fileID: 8955476519032903667}
   _welcomeMessage: {fileID: 8955476519458526264}

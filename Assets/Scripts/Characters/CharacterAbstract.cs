@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using General;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,12 +10,16 @@ public abstract class CharacterAbstract : MonoBehaviour
     [SerializeField] private Transform[] _movePoints;
     [SerializeField] private float _checkPointDelay;
     [Space]
+    [SerializeField] private float _distanceForTolk;
     [SerializeField] private Canvas _canvas;
     [SerializeField] private Text _welcomeMessage;
 
     private Transform _transform;
+    private GameObject _player;
+    private Transform _playerTransform;
     private int _targetPos;
     private bool _isMetHero;
+    private bool _isWelcomeMessageComplete;
 
     public Personality Personality => _personality;
     public Transform Transform => _transform;
@@ -35,6 +40,39 @@ public abstract class CharacterAbstract : MonoBehaviour
     {
         _transform = GetComponent<Transform>();
         if (_movePoints.Length >= 2) StartCoroutine(Move());
+
+        _player = GameObject.FindGameObjectWithTag("Player");
+        if (_player != null) _playerTransform = _player.GetComponent<Transform>();
+
+    }
+
+    private void Update()
+    {
+        if (_personality.WelcomeMessage != null && !_isWelcomeMessageComplete)
+        {
+            if (!_canvas.gameObject.activeInHierarchy && _player != null)
+            {
+                float distanceToPlayer = Vector2.Distance(_transform.position, _playerTransform.position);
+                if (distanceToPlayer <= _distanceForTolk) ShowWelcomeMessage();
+            }
+            else if (_canvas.gameObject.activeInHierarchy)
+            {
+                float distanceToPlayer = Vector2.Distance(_transform.position, _playerTransform.position);
+                if (distanceToPlayer > _distanceForTolk) HideWelcomeMessage();
+            }
+        }
+    }
+
+    private void ShowWelcomeMessage()
+    {
+        _welcomeMessage.text = _personality.WelcomeMessage;
+        _canvas.gameObject.SetActive(true);
+    }
+
+    private void HideWelcomeMessage()
+    {
+        _welcomeMessage.text = "";
+        _canvas.gameObject.SetActive(false);
     }
 
     private IEnumerator Move()
@@ -70,9 +108,14 @@ public abstract class CharacterAbstract : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            _isWelcomeMessageComplete = true;
             StopAllCoroutines();
-            _welcomeMessage.text = _personality.WelcomeMessage;
-            _canvas.gameObject.SetActive(true);
+            if (_personality.WelcomeMessage != null) HideWelcomeMessage();
+            if (_personality.Communication != null)
+            {
+                InputSystem.instance.Pause();
+                CanvasMain.instance.OpenTolkPanel(_personality.Communication);
+            }
         }
     }
 
@@ -81,8 +124,6 @@ public abstract class CharacterAbstract : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             if (_movePoints.Length >= 2) StartCoroutine(Move());
-            _welcomeMessage.text = "";
-            _canvas.gameObject.SetActive(false);
         }
     }
 
