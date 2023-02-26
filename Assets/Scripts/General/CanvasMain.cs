@@ -16,6 +16,9 @@ namespace General {
         [SerializeField]
         private GameObject tolkPanel;
 
+        [SerializeField]
+        private GameObject notePanel;
+
         public GameObject currentOpenWindow;
 
         private List<GameObject> panels;
@@ -24,6 +27,7 @@ namespace General {
             panels.Add(swapPanel);
             panels.Add(deathPanel);
             panels.Add(tolkPanel);
+            panels.Add(notePanel);
 
             CloseAllWindow();
         }
@@ -56,11 +60,20 @@ namespace General {
             deathPanel.SetActive(false);
         }
 
-        public void OpenTolkPanel(MessageCommunication[] communication) {
-            spellPanel.SetActive(false);
+        public void OpenTolkPanel(MessageCommunication[] communication, string story) {
             if (tolkPanel.gameObject.activeInHierarchy) return;
+            spellPanel.SetActive(false);
             tolkPanel.SetActive(true);
-            Tolk.instance.SendSrartMessage(communication);
+            Tolk.instance.SendSrartMessage(communication, story);
+        }
+
+        public void OpenNotePanel(string text)
+        {
+            if (notePanel.gameObject.activeInHierarchy) return;
+            spellPanel.SetActive(false);
+            notePanel.SetActive(true);
+            Note.instance.SetText(text);
+            InputSystem.instance.Pause();
         }
 
         public void CloseAllWindow() {

@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using General;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Note : MonoBehaviour
+public class Note : Singleton<Note>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Text _text;
 
-    // Update is called once per frame
-    void Update()
+    public void SetText(string text)
     {
-        
+        _text.text = text;
     }
 }

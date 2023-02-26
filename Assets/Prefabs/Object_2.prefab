@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4536339173842941853}
   - component: {fileID: 3010329294860830045}
   - component: {fileID: 5317168209521296107}
-  m_Layer: 0
+  - component: {fileID: 1574538006415199381}
+  m_Layer: 6
   m_Name: Object_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,3 +112,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.46875}
   m_EdgeRadius: 0
+--- !u!114 &1574538006415199381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7344305339320534515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.75923157, y: -0.8865967, z: 0}
+  - {x: -0.76020813, y: -0.67326736, z: 0}
+  - {x: -0.90288544, y: -0.61083984, z: 0}
+  - {x: -1, y: 1.234375, z: 0}
+  - {x: 1, y: 1.234375, z: 0}
+  - {x: 0.9073448, y: -0.62867737, z: 0}
+  - {x: 0.7646675, y: -0.6821785, z: 0}
+  - {x: 0.7681465, y: -0.8776779, z: 0}
+  m_ShapePathHash: 2124826021
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 114968

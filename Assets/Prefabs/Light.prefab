@@ -60,7 +60,7 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensityEnabled: 1
   m_ShadowIntensity: 0.75
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1619909895906230523}
   - component: {fileID: 1619909895906230522}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

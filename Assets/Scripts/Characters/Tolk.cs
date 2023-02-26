@@ -9,6 +9,9 @@ public class Tolk : Singleton<Tolk>
     [SerializeField] private Text _name;
     [SerializeField] private GameObject _avatar;
     [Space]
+    [SerializeField] private GameObject _storyPanel;
+    [SerializeField] private Text _story;
+    [Space]
     [SerializeField] private Text _printText;
     [Space]
     [SerializeField] private Button _buttonOne;
@@ -24,20 +27,29 @@ public class Tolk : Singleton<Tolk>
     private void Start()
     {
         _currentMessage = 0;
-        if (_sprite) _sprite = _avatar.GetComponent<Image>();
+        _sprite = _avatar.GetComponent<Image>();
     }
 
-    public void SendSrartMessage(MessageCommunication[] communication)
+    public void SendSrartMessage(MessageCommunication[] communication, string story)
     {
         _communication = communication;
 
-        if (_communication[_currentMessage].bottonTwo == null) _buttonTwo.gameObject.SetActive(false);
+        _currentMessage = 0;
+        _storyPanel.gameObject.SetActive(false);
+
+        if (story != "")
+        {
+            _storyPanel.gameObject.SetActive(true);
+            _story.text = story;
+        }
+
+        if (_communication[_currentMessage].bottonTwo == "") _buttonTwo.gameObject.SetActive(false);
 
         _name.text = _communication[_currentMessage].name;
-        if (_sprite) _sprite.sprite = _communication[_currentMessage].sprite;
+        if (_communication[_currentMessage].sprite) _sprite.sprite = _communication[_currentMessage].sprite;
         _printText.text = _communication[_currentMessage].messageVarOne;
         _buttonOneText.text = _communication[_currentMessage].bottonOne;
-        if (_communication[_currentMessage].bottonTwo != null) _buttonTwoText.text = _communication[_currentMessage].bottonTwo;
+        if (_communication[_currentMessage].bottonTwo != "") _buttonTwoText.text = _communication[_currentMessage].bottonTwo;
     }
 
     public void DisplayOneMessage()
@@ -49,13 +61,16 @@ public class Tolk : Singleton<Tolk>
             return;
         }
 
-        if (_communication[_currentMessage].bottonTwo == null) _buttonTwo.gameObject.SetActive(false);
+        _buttonOne.gameObject.SetActive(true);
+        _buttonTwo.gameObject.SetActive(true);
+
+        if (_communication[_currentMessage].bottonTwo == "") _buttonTwo.gameObject.SetActive(false);
 
         _name.text = _communication[_currentMessage].name;
-        if (_sprite) _sprite.sprite = _communication[_currentMessage].sprite;
+        if (_communication[_currentMessage].sprite) _sprite.sprite = _communication[_currentMessage].sprite;
         _printText.text = _communication[_currentMessage].messageVarOne;
         _buttonOneText.text = _communication[_currentMessage].bottonOne;
-        if (_communication[_currentMessage].bottonTwo != null) _buttonTwoText.text = _communication[_currentMessage].bottonTwo;
+        if (_communication[_currentMessage].bottonTwo != "") _buttonTwoText.text = _communication[_currentMessage].bottonTwo;
     }
 
     public void DisplayTwoMessage()
@@ -67,12 +82,15 @@ public class Tolk : Singleton<Tolk>
             return;
         }
 
-        if (_communication[_currentMessage].bottonTwo == null) _buttonTwo.gameObject.SetActive(false);
+        _buttonOne.gameObject.SetActive(true);
+        _buttonTwo.gameObject.SetActive(true);
+
+        if (_communication[_currentMessage].bottonTwo == "") _buttonTwo.gameObject.SetActive(false);
 
         _name.text = _communication[_currentMessage].name;
-        if (_sprite) _sprite.sprite = _communication[_currentMessage].sprite;
+        if (_communication[_currentMessage].sprite) _sprite.sprite = _communication[_currentMessage].sprite;
         _printText.text = _communication[_currentMessage].messageVarTwo;
         _buttonOneText.text = _communication[_currentMessage].bottonOne;
-        if (_communication[_currentMessage].bottonTwo != null) _buttonTwoText.text = _communication[_currentMessage].bottonTwo;
+        if (_communication[_currentMessage].bottonTwo != "") _buttonTwoText.text = _communication[_currentMessage].bottonTwo;
     }
 }

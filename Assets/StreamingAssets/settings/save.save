@@ -2,7 +2,11 @@
     "isStartGame": false,
     "currentSceneId": 1,
     "player": {
+<<<<<<< Updated upstream
         "currentHP": 0.0,
+=======
+        "currentHP": 100.0,
+>>>>>>> Stashed changes
         "maxHp": 100.0,
         "currentMP": 855.0,
         "maxMP": 1000.0,
@@ -16,7 +20,7 @@
                     "instanceID": 37780
                 },
                 "prefab": {
-                    "instanceID": 29430
+                    "instanceID": 0
                 },
                 "manaCost": 20.0,
                 "audioClip": [
@@ -100,7 +104,7 @@
                 "instanceID": 37780
             },
             "prefab": {
-                "instanceID": 29430
+                "instanceID": 0
             },
             "manaCost": 20.0,
             "audioClip": [

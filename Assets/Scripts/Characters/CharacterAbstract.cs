@@ -20,6 +20,7 @@ public abstract class CharacterAbstract : MonoBehaviour
     private int _targetPos;
     private bool _isMetHero;
     private bool _isWelcomeMessageComplete;
+    private bool _isCommunicationComplete;
 
     public Personality Personality => _personality;
     public Transform Transform => _transform;
@@ -111,10 +112,11 @@ public abstract class CharacterAbstract : MonoBehaviour
             _isWelcomeMessageComplete = true;
             StopAllCoroutines();
             if (_personality.WelcomeMessage != null) HideWelcomeMessage();
-            if (_personality.Communication != null)
+            if (!_isCommunicationComplete && _personality.Communication != null)
             {
+                _isCommunicationComplete = true;
                 InputSystem.instance.Pause();
-                CanvasMain.instance.OpenTolkPanel(_personality.Communication);
+                CanvasMain.instance.OpenTolkPanel(_personality.Communication, _personality.Story);
             }
         }
     }
@@ -125,20 +127,5 @@ public abstract class CharacterAbstract : MonoBehaviour
         {
             if (_movePoints.Length >= 2) StartCoroutine(Move());
         }
-    }
-
-    private void OnEnable()
-    {
-		InputSystem.OnCastFirstAbility += Tolk;
-    }
-
-    private void OnDisable()
-    {
-		InputSystem.OnCastFirstAbility -= Tolk;
-    }
-
-    public void Tolk(int _)
-    {
-        _welcomeMessage.text = _personality.Story;
     }
 }

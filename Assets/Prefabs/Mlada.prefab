@@ -268,10 +268,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8955476519671312246}
   - component: {fileID: 8955476519671312247}
-  - component: {fileID: 8955476519671312249}
   - component: {fileID: 1293013756336063762}
   - component: {fileID: 8955476519671312250}
-  m_Layer: 0
+  - component: {fileID: 5513568193696767615}
+  m_Layer: 6
   m_Name: Mlada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,27 +346,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &8955476519671312249
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8955476519671312251}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &1293013756336063762
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -401,3 +380,30 @@ MonoBehaviour:
   _distanceForTolk: 5
   _canvas: {fileID: 8955476519032903667}
   _welcomeMessage: {fileID: 8955476519458526264}
+--- !u!114 &5513568193696767615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8955476519671312251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.20590162, y: -0.5, z: 0}
+  - {x: -0.13460541, y: -0.30208635, z: 0}
+  - {x: 0.21481371, y: -0.30208635, z: 0}
+  - {x: 0.25937414, y: -0.4910879, z: 0}
+  m_ShapePathHash: -885284827
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -106778
