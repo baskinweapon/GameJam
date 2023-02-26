@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using General;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,13 +18,13 @@ public class Tolk : Singleton<Tolk>
     [SerializeField] private Text _buttonTwoText;
 
     private MessageCommunication[] _communication;
-    private SpriteRenderer _sprite;
+    private Image _sprite;
     private int _currentMessage;
 
     private void Start()
     {
         _currentMessage = 0;
-        _sprite = _avatar.GetComponent<SpriteRenderer>();
+        if (_sprite) _sprite = _avatar.GetComponent<Image>();
     }
 
     public void SendSrartMessage(MessageCommunication[] communication)
@@ -33,7 +34,7 @@ public class Tolk : Singleton<Tolk>
         if (_communication[_currentMessage].bottonTwo == null) _buttonTwo.gameObject.SetActive(false);
 
         _name.text = _communication[_currentMessage].name;
-        _sprite.sprite = _communication[_currentMessage].sprite;
+        if (_sprite) _sprite.sprite = _communication[_currentMessage].sprite;
         _printText.text = _communication[_currentMessage].messageVarOne;
         _buttonOneText.text = _communication[_currentMessage].bottonOne;
         if (_communication[_currentMessage].bottonTwo != null) _buttonTwoText.text = _communication[_currentMessage].bottonTwo;
@@ -43,12 +44,15 @@ public class Tolk : Singleton<Tolk>
     {
         _currentMessage++;
 
-        if (_currentMessage >= _communication.Length) gameObject.SetActive(false);
+        if (_currentMessage >= _communication.Length) {
+            CanvasMain.instance.CloseAllWindow();
+            return;
+        }
 
         if (_communication[_currentMessage].bottonTwo == null) _buttonTwo.gameObject.SetActive(false);
 
         _name.text = _communication[_currentMessage].name;
-        _sprite.sprite = _communication[_currentMessage].sprite;
+        if (_sprite) _sprite.sprite = _communication[_currentMessage].sprite;
         _printText.text = _communication[_currentMessage].messageVarOne;
         _buttonOneText.text = _communication[_currentMessage].bottonOne;
         if (_communication[_currentMessage].bottonTwo != null) _buttonTwoText.text = _communication[_currentMessage].bottonTwo;
@@ -58,12 +62,15 @@ public class Tolk : Singleton<Tolk>
     {
         _currentMessage++;
 
-        if (_currentMessage >= _communication.Length) gameObject.SetActive(false);
+        if (_currentMessage >= _communication.Length) {
+            CanvasMain.instance.CloseAllWindow();
+            return;
+        }
 
         if (_communication[_currentMessage].bottonTwo == null) _buttonTwo.gameObject.SetActive(false);
 
         _name.text = _communication[_currentMessage].name;
-        _sprite.sprite = _communication[_currentMessage].sprite;
+        if (_sprite) _sprite.sprite = _communication[_currentMessage].sprite;
         _printText.text = _communication[_currentMessage].messageVarTwo;
         _buttonOneText.text = _communication[_currentMessage].bottonOne;
         if (_communication[_currentMessage].bottonTwo != null) _buttonTwoText.text = _communication[_currentMessage].bottonTwo;

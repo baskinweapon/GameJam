@@ -8,6 +8,9 @@ namespace General {
         private GameObject swapPanel;
 
         [SerializeField]
+        private GameObject spellPanel;
+
+        [SerializeField]
         private GameObject deathPanel;
 
         [SerializeField]
@@ -53,17 +56,19 @@ namespace General {
             deathPanel.SetActive(false);
         }
 
-        public void OpenTolkPanel(MessageCommunication[] communication)
-        {
+        public void OpenTolkPanel(MessageCommunication[] communication) {
+            spellPanel.SetActive(false);
             if (tolkPanel.gameObject.activeInHierarchy) return;
             tolkPanel.SetActive(true);
             Tolk.instance.SendSrartMessage(communication);
         }
 
         public void CloseAllWindow() {
+            spellPanel.SetActive(true);
             foreach (var panel in panels) {
                 panel.SetActive(false);
             }
+            InputSystem.instance.Pause();
         }
     }
 }
