@@ -10,6 +10,9 @@ namespace General {
         [SerializeField]
         private GameObject deathPanel;
 
+        [SerializeField]
+        private GameObject tolkPanel;
+
         public GameObject currentOpenWindow;
 
         private List<GameObject> panels;
@@ -17,7 +20,8 @@ namespace General {
             panels = new List<GameObject>();
             panels.Add(swapPanel);
             panels.Add(deathPanel);
-            
+            panels.Add(tolkPanel);
+
             CloseAllWindow();
         }
 
@@ -47,6 +51,13 @@ namespace General {
         
         public void CloseDeadthPanel() {
             deathPanel.SetActive(false);
+        }
+
+        public void OpenTolkPanel(MessageCommunication[] communication)
+        {
+            if (tolkPanel.gameObject.activeInHierarchy) return;
+            tolkPanel.SetActive(true);
+            Tolk.instance.SendSrartMessage(communication);
         }
 
         public void CloseAllWindow() {
