@@ -4,7 +4,7 @@
     "player": {
         "currentHP": 2.0,
         "maxHp": 100.0,
-        "currentMP": 982.0,
+        "currentMP": 581.0,
         "maxMP": 1000.0,
         "level": 1,
         "CurrentSpells": [
@@ -90,7 +90,7 @@
             }
         ]
     },
-    "currentSpellId": 4,
+    "currentSpellId": 6,
     "spells": [
         {
             "id": 0,
